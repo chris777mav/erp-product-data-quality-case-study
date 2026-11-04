@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ef846b8799b550d18ee4",
+  "position": {
+    "x": 1020,
+    "y": 92,
+    "z": 1000,
+    "height": 110,
+    "width": 230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "slicer",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DimProduct"
+                    }
+                  },
+                  "Property": "sku"
+                }
+              },
+              "queryRef": "V2_DimProduct.sku",
+              "nativeQueryRef": "sku"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SKU'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

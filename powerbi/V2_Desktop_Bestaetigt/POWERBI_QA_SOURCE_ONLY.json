@@ -1,0 +1,21 @@
+{
+  "status": "SOURCE_CHECKS_PASS",
+  "desktop_opened": false,
+  "source_tables": {
+    "V2_DQ01": 330,
+    "V2_DQ02": 330,
+    "V2_DQ03": 330,
+    "V2_DQ04": 191,
+    "V2_DQ05": 191,
+    "V2_DQ06": 500,
+    "V2_DQ07": 32,
+    "V2_DimProduct": 500,
+    "V2_Pruefmatrix": 500,
+    "V2_ASN_Prozess": 191,
+    "INC002_Sandbox": 2
+  },
+  "relationship_count": 8,
+  "report_pages": 3,
+  "visual_count": 38,
+  "model_data_source": "in-file embedded CSV snapshots; refresh reads same frozen snapshots; not external automatic monitoring"
+}

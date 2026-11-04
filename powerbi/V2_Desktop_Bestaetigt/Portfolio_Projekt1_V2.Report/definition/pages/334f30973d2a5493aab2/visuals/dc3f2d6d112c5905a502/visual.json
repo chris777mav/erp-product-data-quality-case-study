@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "dc3f2d6d112c5905a502",
+  "position": {
+    "x": 20,
+    "y": 496,
+    "z": 1000,
+    "height": 176,
+    "width": 610,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "asn_id"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.asn_id",
+              "nativeQueryRef": "asn_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "asn_line_id"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.asn_line_id",
+              "nativeQueryRef": "asn_line_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "sku"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.sku",
+              "nativeQueryRef": "sku"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "dq04_status"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.dq04_status",
+              "nativeQueryRef": "dq04_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "dq05_status"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.dq05_status",
+              "nativeQueryRef": "dq05_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "announced_qty"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.announced_qty",
+              "nativeQueryRef": "announced_qty"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_ASN_Prozess"
+                    }
+                  },
+                  "Property": "received_qty"
+                }
+              },
+              "queryRef": "V2_ASN_Prozess.received_qty",
+              "nativeQueryRef": "received_qty"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ASN-Positionsabgleich'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

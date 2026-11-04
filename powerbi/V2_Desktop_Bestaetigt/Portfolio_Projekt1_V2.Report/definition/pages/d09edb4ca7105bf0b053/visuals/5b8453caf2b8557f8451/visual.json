@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "5b8453caf2b8557f8451",
+  "position": {
+    "x": 520,
+    "y": 94,
+    "z": 1000,
+    "height": 112,
+    "width": 230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ02"
+                    }
+                  },
+                  "Property": "Dimension_Quote"
+                }
+              },
+              "queryRef": "V2_DQ02.Dimension_Quote",
+              "nativeQueryRef": "Dimension_Quote"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Länge 298/310'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

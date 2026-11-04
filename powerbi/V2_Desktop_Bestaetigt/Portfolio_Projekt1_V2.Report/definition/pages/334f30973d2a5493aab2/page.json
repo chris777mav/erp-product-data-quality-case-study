@@ -1,0 +1,70 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "334f30973d2a5493aab2",
+  "displayName": "02 Qualitaet und Betrieb",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "98ce824af8c05730988f",
+      "target": "9d9c30d9a69f5dda8575",
+      "type": "NoFilter"
+    },
+    {
+      "source": "98ce824af8c05730988f",
+      "target": "b1ff9d5af8f45ac29b12",
+      "type": "NoFilter"
+    },
+    {
+      "source": "98ce824af8c05730988f",
+      "target": "549de2027adf5f178de2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "98ce824af8c05730988f",
+      "target": "43170f5de1f7589f80ac",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0d061ad7efe05c7ba360",
+      "target": "9d9c30d9a69f5dda8575",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0d061ad7efe05c7ba360",
+      "target": "b1ff9d5af8f45ac29b12",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0d061ad7efe05c7ba360",
+      "target": "549de2027adf5f178de2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0d061ad7efe05c7ba360",
+      "target": "43170f5de1f7589f80ac",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1753f10e52075c17bb51",
+      "target": "9d9c30d9a69f5dda8575",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1753f10e52075c17bb51",
+      "target": "b1ff9d5af8f45ac29b12",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1753f10e52075c17bb51",
+      "target": "549de2027adf5f178de2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1753f10e52075c17bb51",
+      "target": "43170f5de1f7589f80ac",
+      "type": "NoFilter"
+    }
+  ]
+}

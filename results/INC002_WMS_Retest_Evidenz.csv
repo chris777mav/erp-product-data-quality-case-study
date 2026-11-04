@@ -1,0 +1,2 @@
+retest_id,case_id,sku,test_environment,target_record_id,wms_article_id,payload_version,sent_length_mm,received_length_mm,pack_version_id,case_qty,ack_status,checked_at,checked_by
+RETEST-INC002-001,INC-002,HYG-1006,SIMULATED_WMS_STUB,ERP-9006,WMS-1006,V2_CORRECTED_S3,203.2,203.2,PK-1006-A,24,ACK_ACCEPTED,2026-09-19T11:16:30,SIMULATED_QA_GATE

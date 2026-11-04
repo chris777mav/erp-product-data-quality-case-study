@@ -1,0 +1,26 @@
+{
+  "quelle_db_sha256": "01b071db832cb21f25f7fc0e39811c101e78f66b0febea5720e068209e5b3ee7",
+  "basiskohorte": 20,
+  "incidents": 11,
+  "prioritaetsverteilung": {
+    "P1": 6,
+    "P2": 4,
+    "P3": 1,
+    "P4": 9
+  },
+  "allow_mit_fachlichem_pruefsignal": 9,
+  "incidents_v1_open": 11,
+  "kontrollzahlen": {
+    "DQ01_PASS": 13,
+    "DQ01_in_scope": 14,
+    "DQ02_PASS": 12,
+    "DQ02_evaluable": 13,
+    "DQ06_ALL_ALLOW": 17
+  },
+  "ausfuehrung": "1/4: Risikomodell und nachvollziehbare Ersteinstufung, noch keine abgeschlossene Root-Cause Bearbeitung",
+  "risikomodell": {
+    "skala_auswirkung": "1-5 qualitativ angenommen; kein gemessener Schaden",
+    "prioritaet": "P1 wenn schwere Auffaelligkeit (>=4) mit ALLOW, HOLD oder WMS-Luecke; P2 schwer ohne solches Merkmal oder mittlere Abweichung; P3 dokumentierter Kontroll-/Reviewstatus; P4 kein registriertes Signal",
+    "keine_wahrscheinlichkeit": "Fehlende Expositionsdaten verbieten quantifizierte Eintrittswahrscheinlichkeit"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "environment": "SYNTHETIC_ISOLATED_WMS_STUB_ONLY",
+  "original_v1_sha256_preserved": "01b071db832cb21f25f7fc0e39811c101e78f66b0febea5720e068209e5b3ee7",
+  "historical_s2_unchanged": true,
+  "s3_added": true,
+  "correction_applied_in_sandbox": true,
+  "rule_check": "approved R1 * 25.4 verified",
+  "dq02_before": "12/13",
+  "dq02_after": "13/13",
+  "wms_retest_passed_in_simulation": true,
+  "wms_negative_control_passed": true,
+  "incident_closed_in_sandbox": true,
+  "historic_incident_still_open_in_original_v1_and_v2": true,
+  "dqo7_after_sandbox": {
+    "case_id": "INC-002",
+    "affected_reference": "HYG-1006",
+    "investigation_status": "CLOSED",
+    "evidence_count": 2,
+    "available_count": 2,
+    "missing_count": 0,
+    "unconfirmed_count": 0,
+    "action_count": 1,
+    "approved_count": 1,
+    "documented_applied_count": 1,
+    "pending_retest_count": 0,
+    "evidence_status": "ALL_RECORDED_EVIDENCE_AVAILABLE",
+    "action_status": "ACTIONS_MARKED_CLOSED"
+  },
+  "rows": [
+    {
+      "stage": "BEFORE",
+      "snapshot_id": "S2-2026-09-15",
+      "sku": "HYG-1006",
+      "expected_length_mm": 203.2,
+      "actual_length_mm": 200.0,
+      "dq02_status": "DIMENSION_MISMATCH",
+      "pass_count": 12,
+      "evaluable_count": 13,
+      "pass_ratio": 0.923077,
+      "action_applied_in_simulated_sandbox": 0,
+      "wms_dependent_retest_status": "PENDING_WMS_RECHECK",
+      "incident_status": "OPEN"
+    },
+    {
+      "stage": "AFTER",
+      "snapshot_id": "S3-2026-09-19",
+      "sku": "HYG-1006",
+      "expected_length_mm": 203.2,
+      "actual_length_mm": 203.2,
+      "dq02_status": "PASS",
+      "pass_count": 13,
+      "evaluable_count": 13,
+      "pass_ratio": 1.0,
+      "action_applied_in_simulated_sandbox": 1,
+      "wms_dependent_retest_status": "PASSED_SIMULATED_WMS",
+      "incident_status": "CLOSED_IN_SIMULATION"
+    }
+  ],
+  "wms_test_evidence": [
+    {
+      "retest_id": "RETEST-INC002-001",
+      "case_id": "INC-002",
+      "sku": "HYG-1006",
+      "test_environment": "SIMULATED_WMS_STUB",
+      "target_record_id": "ERP-9006",
+      "wms_article_id": "WMS-1006",
+      "payload_version": "V2_CORRECTED_S3",
+      "sent_length_mm": 203.2,
+      "received_length_mm": 203.2,
+      "pack_version_id": "PK-1006-A",
+      "case_qty": 24,
+      "ack_status": "ACK_ACCEPTED",
+      "checked_at": "2026-09-19T11:16:30",
+      "checked_by": "SIMULATED_QA_GATE"
+    }
+  ],
+  "limitations": [
+    "Synthetic WMS response is a test fixture, not a real WMS system log.",
+    "No real operations, real supplier/warehouse, or external independent validation.",
+    "Sandbox-only closure does not modify V1/V2 historical incident status or 500-product Power BI KPI."
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "scope": "Independent synthetic retail ERP pilot and deterministic scale test; no Target Canada company data",
+  "original_products": 20,
+  "extended_products": 500,
+  "original_sqlite_unchanged": true,
+  "table_count": 21,
+  "table_row_preservation": {
+    "asns": {
+      "v1": 7,
+      "v2": 191,
+      "original_records_preserved": true
+    },
+    "change_approvals": {
+      "v1": 1,
+      "v2": 12,
+      "original_records_preserved": true
+    },
+    "correction_actions": {
+      "v1": 1,
+      "v2": 1,
+      "original_records_preserved": true
+    },
+    "interface_events": {
+      "v1": 16,
+      "v2": 457,
+      "original_records_preserved": true
+    },
+    "issue_evidence": {
+      "v1": 13,
+      "v2": 34,
+      "original_records_preserved": true
+    },
+    "legacy_snapshot": {
+      "v1": 15,
+      "v2": 335,
+      "original_records_preserved": true
+    },
+    "mapping_rules": {
+      "v1": 3,
+      "v2": 3,
+      "original_records_preserved": true
+    },
+    "migration_events": {
+      "v1": 13,
+      "v2": 317,
+      "original_records_preserved": true
+    },
+    "migration_scope": {
+      "v1": 15,
+      "v2": 335,
+      "original_records_preserved": true
+    },
+    "packaging_levels": {
+      "v1": 41,
+      "v2": 1015,
+      "original_records_preserved": true
+    },
+    "products": {
+      "v1": 20,
+      "v2": 500,
+      "original_records_preserved": true
+    },
+    "purchase_orders": {
+      "v1": 6,
+      "v2": 190,
+      "original_records_preserved": true
+    },
+    "receipts": {
+      "v1": 6,
+      "v2": 181,
+      "original_records_preserved": true
+    },
+    "releases": {
+      "v1": 60,
+      "v2": 1500,
+      "original_records_preserved": true
+    },
+    "reported_cases": {
+      "v1": 11,
+      "v2": 32,
+      "original_records_preserved": true
+    },
+    "stock_snapshots": {
+      "v1": 12,
+      "v2": 192,
+      "original_records_preserved": true
+    },
+    "supplier_articles": {
+      "v1": 20,
+      "v2": 500,
+      "original_records_preserved": true
+    },
+    "supplier_references": {
+      "v1": 21,
+      "v2": 501,
+      "original_records_preserved": true
+    },
+    "suppliers": {
+      "v1": 3,
+      "v2": 9,
+      "original_records_preserved": true
+    },
+    "target_snapshot": {
+      "v1": 31,
+      "v2": 777,
+      "original_records_preserved": true
+    },
+    "wms_snapshot": {
+      "v1": 15,
+      "v2": 453,
+      "original_records_preserved": true
+    }
+  },
+  "controls": {
+    "V1_DQ01": {
+      "row_count": 14,
+      "summary": {
+        "dq01_status": {
+          "PASS": 13,
+          "MISSING_TARGET": 1
+        }
+      }
+    },
+    "V1_DQ02": {
+      "row_count": 14,
+      "summary": {
+        "dq02_status": {
+          "PASS": 12,
+          "MISSING_TARGET": 1,
+          "DIMENSION_MISMATCH": 1
+        }
+      }
+    },
+    "V1_DQ03": {
+      "row_count": 14,
+      "summary": {
+        "load_status": {
+          "SUCCESS": 13,
+          "None": 1
+        },
+        "approval_status": {
+          "APPROVED": 12,
+          "None": 1,
+          "NOT_APPROVED": 1
+        },
+        "version_check": {
+          "PASS": 12,
+          "NO_EVENT": 1,
+          "VERSION_MISMATCH": 1
+        },
+        "approval_check": {
+          "APPROVED": 12,
+          "NO_EVENT": 1,
+          "UNAPPROVED_RULE": 1
+        },
+        "validity_check": {
+          "EFFECTIVE_AT_SENT_TIME": 12,
+          "NO_EVENT": 1,
+          "EXPIRED": 1
+        },
+        "factor_check": {
+          "NOT_APPLICABLE": 11,
+          "NO_EVENT": 1,
+          "PASS": 1,
+          "FACTOR_MISMATCH": 1
+        }
+      }
+    },
+    "V1_DQ04": {
+      "row_count": 7,
+      "summary": {
+        "dq04_status": {
+          "PASS": 5,
+          "BLOCK": 1,
+          "REVIEW": 1
+        }
+      }
+    },
+    "V1_DQ05": {
+      "row_count": 7,
+      "summary": {
+        "dq05_status": {
+          "RECONCILED_POSTED": 4,
+          "RECEIPT_ON_HOLD": 2,
+          "MISSING_RECEIPT": 1
+        }
+      }
+    },
+    "V1_DQ06": {
+      "row_count": 20,
+      "summary": {
+        "dq06_status": {
+          "ALL_PROCESSES_ALLOW": 17,
+          "DOCUMENTED_DISCONTINUATION": 1,
+          "DOCUMENTED_LAUNCH_HOLD": 1,
+          "PACKAGING_REVIEW": 1
+        }
+      }
+    },
+    "V1_DQ07": {
+      "row_count": 11,
+      "summary": {
+        "investigation_status": {
+          "OPEN": 11
+        },
+        "evidence_status": {
+          "MISSING_EVIDENCE_RECORDED": 3,
+          "ALL_RECORDED_EVIDENCE_AVAILABLE": 6,
+          "UNCONFIRMED_EVIDENCE_RECORDED": 2
+        },
+        "action_status": {
+          "NO_ACTION_RECORDED": 10,
+          "APPROVED_APPLICATION_NOT_DOCUMENTED": 1
+        }
+      }
+    },
+    "V2_DQ01": {
+      "row_count": 330,
+      "summary": {
+        "dq01_status": {
+          "PASS": 319,
+          "MISSING_TARGET": 8,
+          "IDENTITY_MISMATCH": 3
+        }
+      }
+    },
+    "V2_DQ02": {
+      "row_count": 330,
+      "summary": {
+        "dq02_status": {
+          "PASS": 298,
+          "MISSING_TARGET": 11,
+          "DIMENSION_MISMATCH": 12,
+          "MISSING_TARGET_LENGTH": 7,
+          "UNSUPPORTED_UOM": 2
+        }
+      }
+    },
+    "V2_DQ03": {
+      "row_count": 330,
+      "summary": {
+        "load_status": {
+          "SUCCESS": 317,
+          "None": 13
+        },
+        "approval_status": {
+          "APPROVED": 306,
+          "None": 13,
+          "NOT_APPROVED": 11
+        },
+        "version_check": {
+          "PASS": 306,
+          "NO_EVENT": 13,
+          "VERSION_MISMATCH": 11
+        },
+        "approval_check": {
+          "APPROVED": 306,
+          "NO_EVENT": 13,
+          "UNAPPROVED_RULE": 11
+        },
+        "validity_check": {
+          "EFFECTIVE_AT_SENT_TIME": 306,
+          "NO_EVENT": 13,
+          "EXPIRED": 11
+        },
+        "factor_check": {
+          "NOT_APPLICABLE": 278,
+          "NO_EVENT": 13,
+          "PASS": 35,
+          "FACTOR_MISMATCH": 2,
+          "UNSUPPORTED_UOM": 2
+        }
+      }
+    },
+    "V2_DQ04": {
+      "row_count": 191,
+      "summary": {
+        "dq04_status": {
+          "PASS": 176,
+          "BLOCK": 14,
+          "REVIEW": 1
+        }
+      }
+    },
+    "V2_DQ05": {
+      "row_count": 191,
+      "summary": {
+        "dq05_status": {
+          "RECONCILED_POSTED": 135,
+          "RECEIPT_ON_HOLD": 37,
+          "MISSING_RECEIPT": 10,
+          "PARTIALLY_RECORDED": 6,
+          "EXCESS_RECORDED": 3
+        }
+      }
+    },
+    "V2_DQ06": {
+      "row_count": 500,
+      "summary": {
+        "dq06_status": {
+          "ALL_PROCESSES_ALLOW": 471,
+          "DOCUMENTED_DISCONTINUATION": 7,
+          "DOCUMENTED_LAUNCH_HOLD": 8,
+          "PACKAGING_REVIEW": 8,
+          "MISSING_ACTIVE_RELEASE": 3,
+          "DUPLICATE_ACTIVE_RELEASE": 3
+        }
+      }
+    },
+    "V2_DQ07": {
+      "row_count": 32,
+      "summary": {
+        "investigation_status": {
+          "OPEN": 32
+        },
+        "evidence_status": {
+          "MISSING_EVIDENCE_RECORDED": 7,
+          "ALL_RECORDED_EVIDENCE_AVAILABLE": 19,
+          "UNCONFIRMED_EVIDENCE_RECORDED": 6
+        },
+        "action_status": {
+          "NO_ACTION_RECORDED": 31,
+          "APPROVED_APPLICATION_NOT_DOCUMENTED": 1
+        }
+      }
+    }
+  },
+  "assertions": "PASS",
+  "inc002_sandbox_report": "INC002_Retestbericht.json",
+  "bi_package": "CSV exports; existing .pbix preserved, NOT automatically rebuilt"
+}

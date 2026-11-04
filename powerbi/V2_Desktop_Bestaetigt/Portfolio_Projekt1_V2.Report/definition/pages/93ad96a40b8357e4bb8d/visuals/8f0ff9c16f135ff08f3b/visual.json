@@ -1,0 +1,130 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "8f0ff9c16f135ff08f3b",
+  "position": {
+    "x": 820,
+    "y": 250,
+    "z": 1000,
+    "height": 245,
+    "width": 430,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "stage"
+                }
+              },
+              "queryRef": "INC002_Sandbox.stage",
+              "nativeQueryRef": "stage"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "sku"
+                }
+              },
+              "queryRef": "INC002_Sandbox.sku",
+              "nativeQueryRef": "sku"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "expected_length_mm"
+                }
+              },
+              "queryRef": "INC002_Sandbox.expected_length_mm",
+              "nativeQueryRef": "expected_length_mm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "actual_length_mm"
+                }
+              },
+              "queryRef": "INC002_Sandbox.actual_length_mm",
+              "nativeQueryRef": "actual_length_mm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "dq02_status"
+                }
+              },
+              "queryRef": "INC002_Sandbox.dq02_status",
+              "nativeQueryRef": "dq02_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "wms_dependent_retest_status"
+                }
+              },
+              "queryRef": "INC002_Sandbox.wms_dependent_retest_status",
+              "nativeQueryRef": "wms_dependent_retest_status"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'INC002: kontrollierter Vorher/Nachher-Vergleich'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

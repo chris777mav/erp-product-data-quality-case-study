@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "0d061ad7efe05c7ba360",
+  "position": {
+    "x": 408,
+    "y": 230,
+    "z": 1000,
+    "height": 250,
+    "width": 410,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ05"
+                    }
+                  },
+                  "Property": "dq05_status"
+                }
+              },
+              "queryRef": "V2_DQ05.dq05_status",
+              "nativeQueryRef": "dq05_status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ05"
+                    }
+                  },
+                  "Property": "ASN_Receipt_Pruefungen"
+                }
+              },
+              "queryRef": "V2_DQ05.ASN_Receipt_Pruefungen",
+              "nativeQueryRef": "ASN_Receipt_Pruefungen"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ASN-Receipt-Zustände'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "1753f10e52075c17bb51",
+  "position": {
+    "x": 840,
+    "y": 230,
+    "z": 1000,
+    "height": 250,
+    "width": 410,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ04"
+                    }
+                  },
+                  "Property": "dq04_status"
+                }
+              },
+              "queryRef": "V2_DQ04.dq04_status",
+              "nativeQueryRef": "dq04_status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ04"
+                    }
+                  },
+                  "Property": "ASN_Pack_Pruefungen"
+                }
+              },
+              "queryRef": "V2_DQ04.ASN_Pack_Pruefungen",
+              "nativeQueryRef": "ASN_Pack_Pruefungen"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Verpackungsstatus'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

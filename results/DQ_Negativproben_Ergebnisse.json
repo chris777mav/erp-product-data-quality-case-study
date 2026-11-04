@@ -1,0 +1,64 @@
+{
+  "simulated_data_only": true,
+  "tests": [
+    {
+      "test": "Delete migrated target record",
+      "control": "DQ01",
+      "field": "dq01_status",
+      "before": "PASS",
+      "after": "MISSING_TARGET",
+      "status": "PASS"
+    },
+    {
+      "test": "Corrupt dimension",
+      "control": "DQ02",
+      "field": "dq02_status",
+      "before": "PASS",
+      "after": "DIMENSION_MISMATCH",
+      "status": "PASS"
+    },
+    {
+      "test": "Change applied mapping version",
+      "control": "DQ03",
+      "field": "version_check",
+      "before": "PASS",
+      "after": "VERSION_MISMATCH",
+      "status": "PASS"
+    },
+    {
+      "test": "Corrupt ASN quantity",
+      "control": "DQ04",
+      "field": "dq04_status",
+      "before": "PASS",
+      "after": "BLOCK",
+      "status": "PASS"
+    },
+    {
+      "test": "Delete receipt log",
+      "control": "DQ05",
+      "field": "dq05_status",
+      "before": "RECONCILED_POSTED",
+      "after": "MISSING_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "test": "Remove active release",
+      "control": "DQ06",
+      "field": "dq06_status",
+      "before": "ALL_PROCESSES_ALLOW",
+      "after": "MISSING_ACTIVE_RELEASE",
+      "status": "PASS"
+    },
+    {
+      "test": "Invalidate evidence availability",
+      "control": "DQ07",
+      "field": "evidence_status",
+      "before": "ALL_RECORDED_EVIDENCE_AVAILABLE",
+      "after": "MISSING_EVIDENCE_RECORDED",
+      "status": "PASS"
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "v1_unchanged_hash": "01b071db832cb21f25f7fc0e39811c101e78f66b0febea5720e068209e5b3ee7"
+}

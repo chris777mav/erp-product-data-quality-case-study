@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "43170f5de1f7589f80ac",
+  "position": {
+    "x": 770,
+    "y": 92,
+    "z": 1000,
+    "height": 112,
+    "width": 230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "Artikel_mit_Pruefsignal"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.Artikel_mit_Pruefsignal",
+              "nativeQueryRef": "Artikel_mit_Pruefsignal"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Artikel mit Prüfsignal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

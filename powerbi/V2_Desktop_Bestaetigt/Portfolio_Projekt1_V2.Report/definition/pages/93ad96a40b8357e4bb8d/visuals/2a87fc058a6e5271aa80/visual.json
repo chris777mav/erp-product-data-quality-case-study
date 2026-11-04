@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "2a87fc058a6e5271aa80",
+  "position": {
+    "x": 20,
+    "y": 518,
+    "z": 1000,
+    "height": 160,
+    "width": 1230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "case_id"
+                }
+              },
+              "queryRef": "V2_DQ07.case_id",
+              "nativeQueryRef": "case_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "affected_reference"
+                }
+              },
+              "queryRef": "V2_DQ07.affected_reference",
+              "nativeQueryRef": "affected_reference"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "investigation_status"
+                }
+              },
+              "queryRef": "V2_DQ07.investigation_status",
+              "nativeQueryRef": "investigation_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "evidence_status"
+                }
+              },
+              "queryRef": "V2_DQ07.evidence_status",
+              "nativeQueryRef": "evidence_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "action_status"
+                }
+              },
+              "queryRef": "V2_DQ07.action_status",
+              "nativeQueryRef": "action_status"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'V2 Incidents (registrierte Auswahl)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

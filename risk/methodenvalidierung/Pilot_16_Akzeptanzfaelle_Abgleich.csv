@@ -1,0 +1,17 @@
+﻿test_id;szenario;sku;vorgesehene_abdeckung;datenpruefung;fachliche_begruendung;offen_bei_teilweise
+AT-01;Korrekte Migration;HYG-1001;PASS;PASS;DQ01=PASS und Soll-/Ziel-ID deckungsgleich;
+AT-02;Legitim ausgeschlossener Altartikel;HYG-1003;PASS;PASS;in_scope=NO und dokumentierter Ausschluss;
+AT-03;Fehlender Zielartikel, Ursache offen;HYG-1004;PASS;PASS;DQ01=MISSING_TARGET, Migrationsevent absent;
+AT-04;Neuartikel ohne Migration;HYG-1015;PASS;PASS;"origin_type=NEW; kein Migrations-Scope nötig";
+AT-05;Genehmigte IN->MM-Umrechnung;HYG-1005;PASS;PASS;6 IN=152,4 mm und genehmigter Faktor 25,4;
+AT-06;Nichtgenehmigter Transformationsfaktor;HYG-1006;PASS;PASS;8 IN / 200 mm / factor 25,0 / nicht genehmigt;
+AT-07;Konsistentes PO-ASN-Receipt;HYG-1001;PASS;PASS;DQ04=PASS und DQ05=RECONCILED_POSTED;
+AT-08;Gleiche Basismenge, nicht genehmigte Packstruktur;HYG-1007;PASS;PASS;DQ04=BLOCK, DQ05=RECEIPT_ON_HOLD;
+AT-09;Zeitlich genehmigte Packänderung;HYG-1008;PASS;PASS;CHG gültig zum ASN, fachlich REVIEW wegen Bestellung;
+AT-10;Teil-Wareneingang / Dokumentationslücke;HYG-1011;TEILWEISE;PASS;"zwei ASNs, eine Receipt; keine Nachweise über physischen Rest";Begrenzte Nachweislage / noch kein vollständiger operativer End-to-End-Test
+AT-11;HOLD-Receipt und blockierter Lagerbestand;HYG-1012;TEILWEISE;PASS;"Blocked 60/60; DQ06 historisch ALLOW, neue Review-Schranke nur als Vorschlag";Begrenzte Nachweislage / noch kein vollständiger operativer End-to-End-Test
+AT-12;WMS fehlt, Event fehlt;HYG-1009;PASS;PASS;WMS- und Eventlücke, Ursache unklar;
+AT-13;WMS fehlt, Failed-Event vorhanden;HYG-1010;TEILWEISE;PASS;"FAILED/NO_WMS_ACK belegt; produktiver Retest nicht vorhanden";Begrenzte Nachweislage / noch kein vollständiger operativer End-to-End-Test
+AT-14;Geplanter Launch-HOLD;HYG-1016;PASS;PASS;DOCUMENTED_LAUNCH_HOLD statt DQ-Defekt;
+AT-15;Unbestätigte Lieferantenreferenz;HYG-1013;PASS;PASS;UNCONFIRMED ≠ korrektes Maß;
+AT-16;Korrektur ohne Folgeretest darf nicht schließen;HYG-1006;PASS;PASS;"Historische OPEN-Baseline; Simulationsabschluss nur bei WMS-Retest";

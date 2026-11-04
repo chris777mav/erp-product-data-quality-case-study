@@ -1,0 +1,117 @@
+{
+  "scope": "500 synthetische SKU, separate V2; nicht Target Canada; Nicht-Realdaten",
+  "records": {
+    "products": 500,
+    "origin": {
+      "MIGRATED": 335,
+      "NEW": 165
+    },
+    "incidents": 32,
+    "asns": 191
+  },
+  "control_statuses": {
+    "DQ01": {
+      "PASS": 319,
+      "MISSING_TARGET": 8,
+      "IDENTITY_MISMATCH": 3
+    },
+    "DQ02": {
+      "PASS": 298,
+      "MISSING_TARGET": 11,
+      "DIMENSION_MISMATCH": 12,
+      "MISSING_TARGET_LENGTH": 7,
+      "UNSUPPORTED_UOM": 2
+    },
+    "DQ03": {
+      "": 330
+    },
+    "DQ04": {
+      "PASS": 176,
+      "BLOCK": 14,
+      "REVIEW": 1
+    },
+    "DQ05": {
+      "RECONCILED_POSTED": 135,
+      "RECEIPT_ON_HOLD": 37,
+      "MISSING_RECEIPT": 10,
+      "PARTIALLY_RECORDED": 6,
+      "EXCESS_RECORDED": 3
+    },
+    "DQ06": {
+      "ALL_PROCESSES_ALLOW": 471,
+      "DOCUMENTED_DISCONTINUATION": 7,
+      "DOCUMENTED_LAUNCH_HOLD": 8,
+      "PACKAGING_REVIEW": 8,
+      "MISSING_ACTIVE_RELEASE": 3,
+      "DUPLICATE_ACTIVE_RELEASE": 3
+    },
+    "DQ07": {
+      "NO_ACTION_RECORDED": 31,
+      "APPROVED_APPLICATION_NOT_DOCUMENTED": 1
+    }
+  },
+  "denominators": {
+    "dq01": {
+      "pass": 319,
+      "in_scope": 330
+    },
+    "dq02": {
+      "pass": 298,
+      "evaluable": 310,
+      "not_evaluable": 20
+    },
+    "dq03": {
+      "approved_applied_version": 306,
+      "events": 317,
+      "missing_events": 13
+    },
+    "dq04": {
+      "pass": 176,
+      "asn_rows": 191
+    },
+    "dq05": {
+      "posted_reconciled": 135,
+      "asn_rows": 191
+    },
+    "dq06": {
+      "all_allow": 471,
+      "products": 500
+    },
+    "dq07": {
+      "open": 32,
+      "cases": 32
+    }
+  },
+  "cross_control": {
+    "migration_non_pass_and_registered_all_allow": 11,
+    "dimension_non_pass_and_registered_all_allow": 32,
+    "review_domain_count_distribution": {
+      "0": 375,
+      "1": 104,
+      "2": 13,
+      "3": 8
+    },
+    "any_review_signal_without_sku_linked_reported_case": 101,
+    "review_signal_with_sku_linked_reported_case": 24,
+    "incident_affected_reference_matches_sku": 28,
+    "incidents_other_reference_type": 4
+  },
+  "provenance": {
+    "database_sha256": "e212a6f317a593055aa62897d63697d613feba012427bb934157044241bc77be",
+    "sql_export_sha256": {
+      "V2_ASN_Business_Process_Join.csv": "3b928874b66c9ea1a97725acc927d401bf938097cc23166815bb8c59ca74eb0a",
+      "V2_ActionQueue.csv": "807074fa741d2616d3fd33bafa8fdf782fbc0edf148b66bead112e4fcf0f5682",
+      "V2_DQ01.csv": "83258ed6620e09fffe79b09b604ee5edb3c3ce42cd16235e9b05dd79373c495a",
+      "V2_DQ02.csv": "ac88230ee74566500bab31baf9a615a9e691de6a30bac7431c76b5db338e25b3",
+      "V2_DQ03.csv": "8bdc44d0310bcfb87f37c5178498fc27c5fbb614938b1c84c8dba11b01c496b0",
+      "V2_DQ04.csv": "61b24be29d3d2b124d4aab914f9df42b656374938db4e6b4fee2a3a9b17093f8",
+      "V2_DQ04_LineLevel.csv": "be25e3ea6ca80b4f002c63d593aa9a6df860b9220d744ec17a59e163e4d270a0",
+      "V2_DQ05.csv": "4d5a1013f7c44107a47d5abbad12d817ee030b47bd81cf0678488c30a29e4c09",
+      "V2_DQ05_LineLevel.csv": "e624f260498c70cba19fc08134f3d48ab41a25c09390a48a0e10966f7aeb4e1e",
+      "V2_DQ06.csv": "b4c2b6c4a56bc305f46206c86c28c0fd53027a0b6925e549ff9acafe453f546e",
+      "V2_DQ07.csv": "8ba1ae96cb309b19e0a63682ab7f5699d87af8751f92d262f5a71256fbffb05a",
+      "V2_DimProduct.csv": "fea0f7d3e129f9c713e12b884b3ad88cc82426c0a934872bf55059523f93f06b"
+    }
+  },
+  "sqlite_sql_csv_revalidation": "7/7 PASS (row-for-row, column-for-column)"
+}

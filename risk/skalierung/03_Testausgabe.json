@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "counts": {
+    "P1": 83,
+    "P2": 29,
+    "P3": 1,
+    "P4": 387
+  },
+  "cases": {
+    "all_cases": 32,
+    "direct_SKU": 28,
+    "indirect_PO_Receipt_ASN": 4,
+    "distinct_case_skus": 32,
+    "unique_risk_or_coverage_flag_skus": 129,
+    "risk_or_coverage_flags_without_mapped_case_skus": 97,
+    "original_v2_report_direct_sku_only_figure": 101
+  },
+  "coverage": 28,
+  "baseline_hash": "e212a6f317a593055aa62897d63697d613feba012427bb934157044241bc77be",
+  "sandbox_delta": {
+    "DQ01_PASS": {
+      "source": 319,
+      "simulation": 320,
+      "difference": 1
+    },
+    "DQ02_PASS": {
+      "source": 298,
+      "simulation": 301,
+      "difference": 3
+    },
+    "DQ02_EVALUABLE": {
+      "source": 310,
+      "simulation": 311,
+      "difference": 1
+    },
+    "DQ04_PASS": {
+      "source": 176,
+      "simulation": 177,
+      "difference": 1
+    },
+    "DQ05_RECONCILED_POSTED": {
+      "source": 135,
+      "simulation": 136,
+      "difference": 1
+    },
+    "DQ03_UNAPPROVED_RULE": {
+      "source": 11,
+      "simulation": 11,
+      "difference": 0
+    },
+    "DQ07_OPEN": {
+      "source": 32,
+      "simulation": 32,
+      "difference": 0
+    },
+    "DQ06_ALL_ALLOW": {
+      "source": 471,
+      "simulation": 471,
+      "difference": 0
+    }
+  }
+}

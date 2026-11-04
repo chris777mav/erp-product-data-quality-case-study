@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "93ad96a40b8357e4bb8d",
+  "displayName": "03 Incidents und INC002",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "a059bd602b5252cb82f8",
+      "target": "ad2a300b392d5a34b8ae",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a059bd602b5252cb82f8",
+      "target": "af8be474becf5221944b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a059bd602b5252cb82f8",
+      "target": "da9383a9abb4550ba674",
+      "type": "NoFilter"
+    },
+    {
+      "source": "a059bd602b5252cb82f8",
+      "target": "915b38477a5c50cc971d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fcdd7e9b859e5ac2af68",
+      "target": "ad2a300b392d5a34b8ae",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fcdd7e9b859e5ac2af68",
+      "target": "af8be474becf5221944b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fcdd7e9b859e5ac2af68",
+      "target": "da9383a9abb4550ba674",
+      "type": "NoFilter"
+    },
+    {
+      "source": "fcdd7e9b859e5ac2af68",
+      "target": "915b38477a5c50cc971d",
+      "type": "NoFilter"
+    }
+  ]
+}

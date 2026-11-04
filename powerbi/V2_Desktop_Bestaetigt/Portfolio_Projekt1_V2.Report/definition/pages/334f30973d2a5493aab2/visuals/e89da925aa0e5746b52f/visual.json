@@ -1,0 +1,130 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "e89da925aa0e5746b52f",
+  "position": {
+    "x": 646,
+    "y": 496,
+    "z": 1000,
+    "height": 176,
+    "width": 604,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "sku"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.sku",
+              "nativeQueryRef": "sku"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "origin_type"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.origin_type",
+              "nativeQueryRef": "origin_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "dq01_status"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.dq01_status",
+              "nativeQueryRef": "dq01_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "dq02_status"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.dq02_status",
+              "nativeQueryRef": "dq02_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "dq06_status"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.dq06_status",
+              "nativeQueryRef": "dq06_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_Pruefmatrix"
+                    }
+                  },
+                  "Property": "review_domains"
+                }
+              },
+              "queryRef": "V2_Pruefmatrix.review_domains",
+              "nativeQueryRef": "review_domains"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Produktbezogene Kontrollmatrix'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

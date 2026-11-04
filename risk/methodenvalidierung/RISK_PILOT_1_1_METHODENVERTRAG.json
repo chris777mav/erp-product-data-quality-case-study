@@ -1,0 +1,47 @@
+{
+  "version": "RISK-PILOT-1.1",
+  "datenbasis": "synthetische ERP-/WMS-Fallstudie; urspruenglicher Pilot als unveraenderter historischer Snapshot",
+  "analysegrain": {
+    "product": "eine Zeile je SKU",
+    "migration": "in_scope Legacy-Zuordnung und S2 Target",
+    "asn_receipt": "ein Vorgang je ASN-ID plus Zeilen-ID; Receipt vor Join aggregieren",
+    "incident": "ein Incident je case_id mit Referenz auf SKU, PO oder Receipt"
+  },
+  "zeitbezug": {
+    "target_s2": "2026-09-15",
+    "release_as_of": "2026-09-18T18:00:00",
+    "regel": "Snapshotuebergreifende Gegenueberstellung nur als Pruefhinweis, nie ungeprueft als zeitgleicher Policy-Verstoss"
+  },
+  "steuerungsprinzipien": [
+    "Risikosignale aus tatsaechlichen Fach- und Kontrolldaten ableiten, nicht aus fest codierten Incident-IDs",
+    "Schwerste potenzielle Tragweite verwenden, nicht denselben Defekt mehrfach addieren",
+    "Potenzielle Tragweite nicht mit empirischer Eintrittswahrscheinlichkeit verwechseln",
+    "Unbestaetigte Lieferanteninformation als Evidenzluecke, nicht als bestaetigten falschen Datenwert interpretieren",
+    "Fehlender Logeintrag beweist keine bestimmte technische Root Cause",
+    "Freigabe-ALLOW plus negatives Datenqualitaetssignal ist zu pruefen, nicht automatisch eine bindende Sperre",
+    "Genehmigte Packaenderungen und geplante Launch-HOLDs gesondert behandeln",
+    "Nachtraeglich geschlossene Simulationszweige nicht in historische Incidents zurueckschreiben",
+    "Korrektur eines einzelnen Checks beendet keinen incident ohne Pruefung der abhaengigen Prozesse",
+    "Alle erkannten Signale bewerten; vertiefte Fallbearbeitung nach Prioritaet; reproduzierbare Negativtests"
+  ],
+  "prioritaeten": {
+    "P1": "angenommene Tragweite >=4 plus dokumentiertes ALLOW / Receipt-HOLD / WMS-Fehlbestand; umgehend fachlich pruefen",
+    "P2": "relevantes Signal >=3 oder schwerwiegender Hinweis ohne P1-Kontext; zeitnah klaeren",
+    "P3": "gueltiger geplanter HOLD / offene administrative Nachverfolgung; dokumentiert beobachten",
+    "P4": "kein registriertes negatives Signal; keine globale Fehlerfreiheitsbehauptung"
+  },
+  "separate_fachliche_freigabe": {
+    "registered_release": "Datenbefund aus releases, historisch unveraendert",
+    "suggested_gate": "Empfehlung zur manuellen, verantworteten Review-, HOLD- oder Ausnahmeentscheidung",
+    "auto_change_release": false,
+    "auto_close_incident": false
+  },
+  "gueltigkeitsgrenzen": [
+    "AT-10 kein Beleg einer physisch ausgefallenen Lieferung",
+    "AT-11 HOLD/blocked und historische ALLOW-Entscheidung noch ohne verbindliche Gate-Policy",
+    "AT-13 FAILED-Event ohne belegten spaeteren erfolgreichen Retry",
+    "7 SQL-Checks pruefen nicht saemtliche 26 Fachregeln",
+    "Kein Beleg fuer produktive ERP-/WMS-Leistung, Umsatzwirkung oder unvoreingenommene Echtweltdaten"
+  ],
+  "skalierungsbedingung": "Bei 500 Artikeln dieselbe Fachsemantik und Prioritaetsregeln verwenden; rein technische Kohorten-/Schema-Adapter vorab pruefen und nachweisen. Keine nachtraegliche Anpassung der Regeln an gefundene Zahlen."
+}

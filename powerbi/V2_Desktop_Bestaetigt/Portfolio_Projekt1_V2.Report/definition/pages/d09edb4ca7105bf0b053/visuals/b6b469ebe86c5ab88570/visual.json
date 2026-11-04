@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "b6b469ebe86c5ab88570",
+  "position": {
+    "x": 770,
+    "y": 94,
+    "z": 1000,
+    "height": 112,
+    "width": 230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ06"
+                    }
+                  },
+                  "Property": "Release_Quote"
+                }
+              },
+              "queryRef": "V2_DQ06.Release_Quote",
+              "nativeQueryRef": "Release_Quote"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Freigaben 471/500'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

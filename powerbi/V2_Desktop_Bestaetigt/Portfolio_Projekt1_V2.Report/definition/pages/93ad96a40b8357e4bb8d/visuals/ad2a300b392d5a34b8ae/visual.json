@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ad2a300b392d5a34b8ae",
+  "position": {
+    "x": 20,
+    "y": 90,
+    "z": 1000,
+    "height": 112,
+    "width": 220,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "Incidents_OPEN"
+                }
+              },
+              "queryRef": "V2_DQ07.Incidents_OPEN",
+              "nativeQueryRef": "Incidents_OPEN"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'V2 offene Incidents'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

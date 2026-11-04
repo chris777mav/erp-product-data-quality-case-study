@@ -1,0 +1,19 @@
+{
+  "semantic_model_format": "4.2",
+  "defaultPowerBIDataSourceVersion": "powerBI_V3",
+  "model_tables": {
+    "V2_DQ01": 330,
+    "V2_DQ02": 330,
+    "V2_DQ03": 330,
+    "V2_DQ04": 191,
+    "V2_DQ05": 191,
+    "V2_DQ06": 500,
+    "V2_DQ07": 32,
+    "V2_DimProduct": 500,
+    "V2_Pruefmatrix": 500,
+    "V2_ASN_Prozess": 191,
+    "INC002_Sandbox": 2
+  },
+  "relationship_count": 8,
+  "status": "source_files_checked_desktop_not_tested"
+}

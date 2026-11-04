@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4ffd68a14c015dda8c37",
+  "position": {
+    "x": 430,
+    "y": 232,
+    "z": 1000,
+    "height": 295,
+    "width": 455,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ06"
+                    }
+                  },
+                  "Property": "dq06_status"
+                }
+              },
+              "queryRef": "V2_DQ06.dq06_status",
+              "nativeQueryRef": "dq06_status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ06"
+                    }
+                  },
+                  "Property": "Release_Artikel"
+                }
+              },
+              "queryRef": "V2_DQ06.Release_Artikel",
+              "nativeQueryRef": "Release_Artikel"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Registrierte Freigaben'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

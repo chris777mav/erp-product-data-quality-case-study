@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9d9c30d9a69f5dda8575",
+  "position": {
+    "x": 20,
+    "y": 92,
+    "z": 1000,
+    "height": 112,
+    "width": 230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ03"
+                    }
+                  },
+                  "Property": "Mapping_Gueltig"
+                }
+              },
+              "queryRef": "V2_DQ03.Mapping_Gueltig",
+              "nativeQueryRef": "Mapping_Gueltig"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mapping genehmigt (Ereignisse)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

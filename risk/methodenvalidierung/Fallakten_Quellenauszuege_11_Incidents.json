@@ -1,0 +1,2365 @@
+{
+  "INC-001": {
+    "case": "INC-001",
+    "sku": "HYG-1004",
+    "reported_cases": [
+      {
+        "case_id": "INC-001",
+        "affected_reference": "HYG-1004",
+        "reported_symptom": "TARGET_RECORD_NOT_VISIBLE",
+        "reported_by": "Migrationsteam",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-001",
+        "case_id": "INC-001",
+        "source_table": "migration_scope",
+        "source_record_reference": "RUN-2026-09/ALT-1004",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Migration required"
+      },
+      {
+        "evidence_id": "EVID-002",
+        "case_id": "INC-001",
+        "source_table": "migration_events",
+        "source_record_reference": "ALT-1004",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "No matching event in supplied log"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1004",
+        "product_group": "MUNDHYGIENE",
+        "description": "Zahnpasta Sensitive 75 ml",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1004",
+        "sku": "HYG-1004",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 24,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1004",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9004",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [],
+    "migration_events": [],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1004-A",
+        "sku": "HYG-1004",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 24,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1004-A",
+        "sku": "HYG-1004",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1004-A",
+        "supplier_id": "L-01",
+        "supplier_article_no": "HG-1004",
+        "sku": "HYG-1004",
+        "pack_version_id": "PK-1004-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 24,
+        "reference_source_id": "SYN-LIEFERANT-L-01-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [],
+    "wms_snapshot": [],
+    "stock_snapshots": [],
+    "releases": [
+      {
+        "release_id": "REL-1004-BRANCH_SUPPLY",
+        "sku": "HYG-1004",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1004-PROCUREMENT",
+        "sku": "HYG-1004",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1004-WMS_RECEIPT",
+        "sku": "HYG-1004",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-002": {
+    "case": "INC-002",
+    "sku": "HYG-1006",
+    "reported_cases": [
+      {
+        "case_id": "INC-002",
+        "affected_reference": "HYG-1006",
+        "reported_symptom": "DIMENSION_DISCREPANCY",
+        "reported_by": "Stammdaten",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-003",
+        "case_id": "INC-002",
+        "source_table": "migration_events",
+        "source_record_reference": "MIG-E-1006",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Migration event can be inspected"
+      }
+    ],
+    "correction_actions": [
+      {
+        "action_id": "FIX-1006-01",
+        "case_id": "INC-002",
+        "affected_reference": "HYG-1006",
+        "field_name": "target_snapshot.length_mm",
+        "old_value": 200.0,
+        "proposed_value": 203.2,
+        "approved_by": "MDM-01",
+        "approved_at": "2026-09-18T13:00:00",
+        "applied_at": null,
+        "dependent_retest_status": "PENDING_WMS_RECHECK",
+        "closure_status": "OPEN"
+      }
+    ],
+    "product": [
+      {
+        "sku": "HYG-1006",
+        "product_group": "KOERPERPFLEGE",
+        "description": "Shampoo 300 ml",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1006",
+        "sku": "HYG-1006",
+        "length_value": 8.0,
+        "dimension_uom": "IN",
+        "case_qty": 24,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1006",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9006",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9006",
+        "sku": "HYG-1006",
+        "length_mm": 200.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 24,
+        "pack_version_id": "PK-1006-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1006",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1006",
+        "target_record_id": "ERP-9006",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+        "applied_length_factor": 25.0
+      }
+    ],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1006-A",
+        "sku": "HYG-1006",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 24,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1006-A",
+        "sku": "HYG-1006",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 203.2,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1006-A",
+        "supplier_id": "L-01",
+        "supplier_article_no": "HG-1006",
+        "sku": "HYG-1006",
+        "pack_version_id": "PK-1006-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 24,
+        "reference_source_id": "SYN-LIEFERANT-L-01-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1006",
+        "sku": "HYG-1006",
+        "target_record_id": "ERP-9006",
+        "wms_article_id": "WMS-1006",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1006",
+        "sku": "HYG-1006",
+        "accepted_pack_version_id": "PK-1006-A",
+        "known_case_qty": 24,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [
+      {
+        "sku": "HYG-1006",
+        "location_id": "DC-HH-01",
+        "snapshot_at": "2026-09-18T18:00:00",
+        "on_hand_base_qty": 100,
+        "reserved_base_qty": 0,
+        "blocked_base_qty": 0
+      }
+    ],
+    "releases": [
+      {
+        "release_id": "REL-1006-BRANCH_SUPPLY",
+        "sku": "HYG-1006",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1006-PROCUREMENT",
+        "sku": "HYG-1006",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1006-WMS_RECEIPT",
+        "sku": "HYG-1006",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-003": {
+    "case": "INC-003",
+    "sku": "HYG-1007",
+    "reported_cases": [
+      {
+        "case_id": "INC-003",
+        "affected_reference": "PO-0007",
+        "reported_symptom": "PACKAGING_DIFFERENCE",
+        "reported_by": "Wareneingang",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-004",
+        "case_id": "INC-003",
+        "source_table": "asns",
+        "source_record_reference": "ASN-0007/10",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Supplier packing declaration available"
+      },
+      {
+        "evidence_id": "EVID-005",
+        "case_id": "INC-003",
+        "source_table": "change_approvals",
+        "source_record_reference": "PO-0007",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "No corresponding approval on file"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1007",
+        "product_group": "MUNDHYGIENE",
+        "description": "Zahnbuerste Soft",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1007",
+        "sku": "HYG-1007",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 100,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1007",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9007",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9007",
+        "sku": "HYG-1007",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 100,
+        "pack_version_id": "PK-1007-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1007",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1007",
+        "target_record_id": "ERP-9007",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [
+      {
+        "po_id": "PO-0007",
+        "po_line_id": "10",
+        "supplier_id": "L-01",
+        "sku": "HYG-1007",
+        "ordered_qty": 10,
+        "order_uom": "CASE",
+        "ordered_base_qty": 1000,
+        "expected_pack_version_id": "PK-1007-A",
+        "expected_case_qty": 100,
+        "expected_case_count": 10,
+        "order_at": "2026-09-15T10:00:00",
+        "order_status": "OPEN"
+      }
+    ],
+    "asns": [
+      {
+        "asn_id": "ASN-0007",
+        "asn_line_id": "10",
+        "po_id": "PO-0007",
+        "po_line_id": "10",
+        "sku": "HYG-1007",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 4,
+        "each_per_package": 250,
+        "announced_base_qty": 1000,
+        "pack_version_id": "UNKNOWN_PACK_VERSION",
+        "change_approval_id": null
+      }
+    ],
+    "receipts": [
+      {
+        "receipt_id": "REC-0007",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0007",
+        "asn_line_id": "10",
+        "po_id": "PO-0007",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1007",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 4,
+        "each_per_package": 250,
+        "received_base_qty": 1000,
+        "processing_status": "HOLD"
+      }
+    ],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1007-A",
+        "sku": "HYG-1007",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 100,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1007-A",
+        "sku": "HYG-1007",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1007-A",
+        "supplier_id": "L-01",
+        "supplier_article_no": "HG-1007",
+        "sku": "HYG-1007",
+        "pack_version_id": "PK-1007-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 100,
+        "reference_source_id": "SYN-LIEFERANT-L-01-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1007",
+        "sku": "HYG-1007",
+        "target_record_id": "ERP-9007",
+        "wms_article_id": "WMS-1007",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1007",
+        "sku": "HYG-1007",
+        "accepted_pack_version_id": "PK-1007-A",
+        "known_case_qty": 100,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [
+      {
+        "sku": "HYG-1007",
+        "location_id": "DC-HH-01",
+        "snapshot_at": "2026-09-18T18:00:00",
+        "on_hand_base_qty": 1000,
+        "reserved_base_qty": 0,
+        "blocked_base_qty": 1000
+      }
+    ],
+    "releases": [
+      {
+        "release_id": "REL-1007-BRANCH_SUPPLY",
+        "sku": "HYG-1007",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1007-PROCUREMENT",
+        "sku": "HYG-1007",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1007-WMS_RECEIPT",
+        "sku": "HYG-1007",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-004": {
+    "case": "INC-004",
+    "sku": "HYG-1008",
+    "reported_cases": [
+      {
+        "case_id": "INC-004",
+        "affected_reference": "PO-0008",
+        "reported_symptom": "PACKAGING_DIFFERENCE",
+        "reported_by": "Wareneingang",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-006",
+        "case_id": "INC-004",
+        "source_table": "change_approvals",
+        "source_record_reference": "CHG-1008",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Explicit case change approval"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1008",
+        "product_group": "KOERPERPFLEGE",
+        "description": "Handseife Nachfuellpack 500 ml",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1008",
+        "sku": "HYG-1008",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 100,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1008",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9008",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9008",
+        "sku": "HYG-1008",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 100,
+        "pack_version_id": "PK-1008-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1008",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1008",
+        "target_record_id": "ERP-9008",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [
+      {
+        "po_id": "PO-0008",
+        "po_line_id": "10",
+        "supplier_id": "L-02",
+        "sku": "HYG-1008",
+        "ordered_qty": 10,
+        "order_uom": "CASE",
+        "ordered_base_qty": 1000,
+        "expected_pack_version_id": "PK-1008-A",
+        "expected_case_qty": 100,
+        "expected_case_count": 10,
+        "order_at": "2026-09-15T10:00:00",
+        "order_status": "OPEN"
+      }
+    ],
+    "asns": [
+      {
+        "asn_id": "ASN-0008",
+        "asn_line_id": "10",
+        "po_id": "PO-0008",
+        "po_line_id": "10",
+        "sku": "HYG-1008",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 8,
+        "each_per_package": 125,
+        "announced_base_qty": 1000,
+        "pack_version_id": "PK-1008-B",
+        "change_approval_id": "CHG-1008"
+      }
+    ],
+    "receipts": [
+      {
+        "receipt_id": "REC-0008",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0008",
+        "asn_line_id": "10",
+        "po_id": "PO-0008",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1008",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 8,
+        "each_per_package": 125,
+        "received_base_qty": 1000,
+        "processing_status": "POSTED"
+      }
+    ],
+    "change_approvals": [
+      {
+        "change_approval_id": "CHG-1008",
+        "sku": "HYG-1008",
+        "approved_pack_version_id": "PK-1008-B",
+        "approved_at": "2026-09-15T16:00:00",
+        "effective_from": "2026-09-16T00:00:00",
+        "effective_to": null,
+        "approved_by": "EINKAUF-01",
+        "change_reason": "CONFIRMED_SUPPLIER_CASE_CHANGE"
+      }
+    ],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1008-A",
+        "sku": "HYG-1008",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 100,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-09-16",
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1008-A",
+        "sku": "HYG-1008",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-09-16",
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1008-B",
+        "sku": "HYG-1008",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 125,
+        "gtin": null,
+        "valid_from": "2026-09-16",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 360.0,
+        "width_mm": 280.0,
+        "height_mm": 260.0,
+        "gross_weight_g": 6250.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1008-B",
+        "sku": "HYG-1008",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-09-16",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1008-A",
+        "supplier_id": "L-02",
+        "supplier_article_no": "HG-1008",
+        "sku": "HYG-1008",
+        "pack_version_id": "PK-1008-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": "2026-09-16",
+        "approval_status": "APPROVED",
+        "case_qty": 100,
+        "reference_source_id": "SYN-LIEFERANT-L-02-A",
+        "approved_by": "EINKAUF-01"
+      },
+      {
+        "reference_id": "REF-1008-B",
+        "supplier_id": "L-02",
+        "supplier_article_no": "HG-1008",
+        "sku": "HYG-1008",
+        "pack_version_id": "PK-1008-B",
+        "confirmed_at": "2026-09-15T16:00:00",
+        "valid_from": "2026-09-16",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 125,
+        "reference_source_id": "SYN-LIEFERANT-L-02-B",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1008",
+        "sku": "HYG-1008",
+        "target_record_id": "ERP-9008",
+        "wms_article_id": "WMS-1008",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1008",
+        "sku": "HYG-1008",
+        "accepted_pack_version_id": "PK-1008-B",
+        "known_case_qty": 125,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [
+      {
+        "sku": "HYG-1008",
+        "location_id": "DC-HH-01",
+        "snapshot_at": "2026-09-18T18:00:00",
+        "on_hand_base_qty": 400,
+        "reserved_base_qty": 10,
+        "blocked_base_qty": 0
+      }
+    ],
+    "releases": [
+      {
+        "release_id": "REL-1008-BRANCH_SUPPLY",
+        "sku": "HYG-1008",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1008-PROCUREMENT",
+        "sku": "HYG-1008",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1008-WMS_RECEIPT",
+        "sku": "HYG-1008",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-005": {
+    "case": "INC-005",
+    "sku": "HYG-1011",
+    "reported_cases": [
+      {
+        "case_id": "INC-005",
+        "affected_reference": "PO-0011",
+        "reported_symptom": "ORDER_PARTIALLY_DELIVERED",
+        "reported_by": "Einkauf",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-007",
+        "case_id": "INC-005",
+        "source_table": "receipts",
+        "source_record_reference": "REC-0011-A/10",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "One partial receipt recorded"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1011",
+        "product_group": "HAUSHALTSHYGIENE",
+        "description": "Waschmittel-Pods 24 Stueck",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1011",
+        "sku": "HYG-1011",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 24,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1011",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9011",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9011",
+        "sku": "HYG-1011",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 24,
+        "pack_version_id": "PK-1011-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1011",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1011",
+        "target_record_id": "ERP-9011",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [
+      {
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "supplier_id": "L-02",
+        "sku": "HYG-1011",
+        "ordered_qty": 10,
+        "order_uom": "CASE",
+        "ordered_base_qty": 240,
+        "expected_pack_version_id": "PK-1011-A",
+        "expected_case_qty": 24,
+        "expected_case_count": 10,
+        "order_at": "2026-09-15T10:00:00",
+        "order_status": "OPEN"
+      }
+    ],
+    "asns": [
+      {
+        "asn_id": "ASN-0011-A",
+        "asn_line_id": "10",
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "sku": "HYG-1011",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 4,
+        "each_per_package": 24,
+        "announced_base_qty": 96,
+        "pack_version_id": "PK-1011-A",
+        "change_approval_id": null
+      },
+      {
+        "asn_id": "ASN-0011-B",
+        "asn_line_id": "10",
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "sku": "HYG-1011",
+        "sent_at": "2026-09-17T08:00:00",
+        "package_count": 6,
+        "each_per_package": 24,
+        "announced_base_qty": 144,
+        "pack_version_id": "PK-1011-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipts": [
+      {
+        "receipt_id": "REC-0011-A",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0011-A",
+        "asn_line_id": "10",
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1011",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 4,
+        "each_per_package": 24,
+        "received_base_qty": 96,
+        "processing_status": "POSTED"
+      }
+    ],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1011-A",
+        "sku": "HYG-1011",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 24,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1011-A",
+        "sku": "HYG-1011",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1011-A",
+        "supplier_id": "L-02",
+        "supplier_article_no": "HG-1011",
+        "sku": "HYG-1011",
+        "pack_version_id": "PK-1011-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 24,
+        "reference_source_id": "SYN-LIEFERANT-L-02-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1011",
+        "sku": "HYG-1011",
+        "target_record_id": "ERP-9011",
+        "wms_article_id": "WMS-1011",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1011",
+        "sku": "HYG-1011",
+        "accepted_pack_version_id": "PK-1011-A",
+        "known_case_qty": 24,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [
+      {
+        "sku": "HYG-1011",
+        "location_id": "DC-HH-01",
+        "snapshot_at": "2026-09-18T18:00:00",
+        "on_hand_base_qty": 400,
+        "reserved_base_qty": 0,
+        "blocked_base_qty": 0
+      }
+    ],
+    "releases": [
+      {
+        "release_id": "REL-1011-BRANCH_SUPPLY",
+        "sku": "HYG-1011",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1011-PROCUREMENT",
+        "sku": "HYG-1011",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1011-WMS_RECEIPT",
+        "sku": "HYG-1011",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-006": {
+    "case": "INC-006",
+    "sku": "HYG-1012",
+    "reported_cases": [
+      {
+        "case_id": "INC-006",
+        "affected_reference": "REC-0012",
+        "reported_symptom": "RECEIPT_QUARANTINED",
+        "reported_by": "Lager",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-008",
+        "case_id": "INC-006",
+        "source_table": "stock_snapshots",
+        "source_record_reference": "HYG-1012/DC-HH-01",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Blocked balance in dated snapshot"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1012",
+        "product_group": "HYGIENEBEDARF",
+        "description": "Feuchttuecher Baby 80 Stueck",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1012",
+        "sku": "HYG-1012",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 12,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1012",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9012",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9012",
+        "sku": "HYG-1012",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 12,
+        "pack_version_id": "PK-1012-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1012",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1012",
+        "target_record_id": "ERP-9012",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [
+      {
+        "po_id": "PO-0012",
+        "po_line_id": "10",
+        "supplier_id": "L-03",
+        "sku": "HYG-1012",
+        "ordered_qty": 5,
+        "order_uom": "CASE",
+        "ordered_base_qty": 60,
+        "expected_pack_version_id": "PK-1012-A",
+        "expected_case_qty": 12,
+        "expected_case_count": 5,
+        "order_at": "2026-09-15T10:00:00",
+        "order_status": "OPEN"
+      }
+    ],
+    "asns": [
+      {
+        "asn_id": "ASN-0012",
+        "asn_line_id": "10",
+        "po_id": "PO-0012",
+        "po_line_id": "10",
+        "sku": "HYG-1012",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 5,
+        "each_per_package": 12,
+        "announced_base_qty": 60,
+        "pack_version_id": "PK-1012-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipts": [
+      {
+        "receipt_id": "REC-0012",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0012",
+        "asn_line_id": "10",
+        "po_id": "PO-0012",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1012",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 5,
+        "each_per_package": 12,
+        "received_base_qty": 60,
+        "processing_status": "HOLD"
+      }
+    ],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1012-A",
+        "sku": "HYG-1012",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 12,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1012-A",
+        "sku": "HYG-1012",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1012-A",
+        "supplier_id": "L-03",
+        "supplier_article_no": "HG-1012",
+        "sku": "HYG-1012",
+        "pack_version_id": "PK-1012-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 12,
+        "reference_source_id": "SYN-LIEFERANT-L-03-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1012",
+        "sku": "HYG-1012",
+        "target_record_id": "ERP-9012",
+        "wms_article_id": "WMS-1012",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1012",
+        "sku": "HYG-1012",
+        "accepted_pack_version_id": "PK-1012-A",
+        "known_case_qty": 12,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [
+      {
+        "sku": "HYG-1012",
+        "location_id": "DC-HH-01",
+        "snapshot_at": "2026-09-18T18:00:00",
+        "on_hand_base_qty": 60,
+        "reserved_base_qty": 0,
+        "blocked_base_qty": 60
+      }
+    ],
+    "releases": [
+      {
+        "release_id": "REL-1012-BRANCH_SUPPLY",
+        "sku": "HYG-1012",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1012-PROCUREMENT",
+        "sku": "HYG-1012",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1012-WMS_RECEIPT",
+        "sku": "HYG-1012",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-007": {
+    "case": "INC-007",
+    "sku": "HYG-1009",
+    "reported_cases": [
+      {
+        "case_id": "INC-007",
+        "affected_reference": "HYG-1009",
+        "reported_symptom": "WMS_RECORD_MISSING",
+        "reported_by": "ERP-Support",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-009",
+        "case_id": "INC-007",
+        "source_table": "interface_events",
+        "source_record_reference": "HYG-1009",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "No submitted event in extract"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1009",
+        "product_group": "HYGIENEBEDARF",
+        "description": "Wattepads 100 Stueck",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1009",
+        "sku": "HYG-1009",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 24,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1009",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9009",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9009",
+        "sku": "HYG-1009",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 24,
+        "pack_version_id": "PK-1009-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1009",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1009",
+        "target_record_id": "ERP-9009",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1009-A",
+        "sku": "HYG-1009",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 24,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1009-A",
+        "sku": "HYG-1009",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1009-A",
+        "supplier_id": "L-01",
+        "supplier_article_no": "HG-1009",
+        "sku": "HYG-1009",
+        "pack_version_id": "PK-1009-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 24,
+        "reference_source_id": "SYN-LIEFERANT-L-01-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [],
+    "wms_snapshot": [],
+    "stock_snapshots": [],
+    "releases": [
+      {
+        "release_id": "REL-1009-BRANCH_SUPPLY",
+        "sku": "HYG-1009",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1009-PROCUREMENT",
+        "sku": "HYG-1009",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1009-WMS_RECEIPT",
+        "sku": "HYG-1009",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-008": {
+    "case": "INC-008",
+    "sku": "HYG-1010",
+    "reported_cases": [
+      {
+        "case_id": "INC-008",
+        "affected_reference": "HYG-1010",
+        "reported_symptom": "WMS_RECORD_MISSING",
+        "reported_by": "ERP-Support",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-010",
+        "case_id": "INC-008",
+        "source_table": "interface_events",
+        "source_record_reference": "INT-1010",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Processing log exists"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1010",
+        "product_group": "HYGIENEBEDARF",
+        "description": "Hygienetuecher 50 Stueck",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1010",
+        "sku": "HYG-1010",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 30,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1010",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9010",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9010",
+        "sku": "HYG-1010",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 30,
+        "pack_version_id": "PK-1010-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1010",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1010",
+        "target_record_id": "ERP-9010",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1010-A",
+        "sku": "HYG-1010",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 30,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1010-A",
+        "sku": "HYG-1010",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1010-A",
+        "supplier_id": "L-03",
+        "supplier_article_no": "HG-1010",
+        "sku": "HYG-1010",
+        "pack_version_id": "PK-1010-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 30,
+        "reference_source_id": "SYN-LIEFERANT-L-03-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1010",
+        "sku": "HYG-1010",
+        "target_record_id": "ERP-9010",
+        "wms_article_id": null,
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": null,
+        "processing_status": "FAILED",
+        "error_code": "NO_WMS_ACK",
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [],
+    "stock_snapshots": [],
+    "releases": [
+      {
+        "release_id": "REL-1010-BRANCH_SUPPLY",
+        "sku": "HYG-1010",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1010-PROCUREMENT",
+        "sku": "HYG-1010",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1010-WMS_RECEIPT",
+        "sku": "HYG-1010",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-009": {
+    "case": "INC-009",
+    "sku": "HYG-1013",
+    "reported_cases": [
+      {
+        "case_id": "INC-009",
+        "affected_reference": "HYG-1013",
+        "reported_symptom": "PRODUCT_MEASURE_NOT_VERIFIED",
+        "reported_by": "Stammdaten",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-011",
+        "case_id": "INC-009",
+        "source_table": "supplier_references",
+        "source_record_reference": "REF-1013-A",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Supplier reference lacks confirmation"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1013",
+        "product_group": "HYGIENEBEDARF",
+        "description": "Wattestaebchen 200 Stueck",
+        "origin_type": "MIGRATED",
+        "lifecycle_status": "ACTIVE",
+        "base_uom": "EA",
+        "created_at": "2025-01-10T09:00:00"
+      }
+    ],
+    "legacy": [
+      {
+        "snapshot_id": "S0-2026-09-01",
+        "extracted_at": "2026-09-01T23:00:00",
+        "legacy_record_id": "ALT-1013",
+        "sku": "HYG-1013",
+        "length_value": 160.0,
+        "dimension_uom": "MM",
+        "case_qty": 36,
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "scope": [
+      {
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1013",
+        "in_scope": "YES",
+        "exclusion_reason": null,
+        "expected_target_record_id": "ERP-9013",
+        "mapping_rule_version": "R1",
+        "approved_at": "2026-08-31T15:00:00",
+        "approved_by": "MDM-01"
+      }
+    ],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9013",
+        "sku": "HYG-1013",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 36,
+        "pack_version_id": "PK-1013-A",
+        "base_uom": "EA",
+        "lifecycle_status": "ACTIVE"
+      }
+    ],
+    "migration_events": [
+      {
+        "event_id": "MIG-E-1013",
+        "migration_run_id": "RUN-2026-09",
+        "legacy_record_id": "ALT-1013",
+        "target_record_id": "ERP-9013",
+        "sent_at": "2026-09-09T10:00:00",
+        "received_at": "2026-09-10T11:00:00",
+        "load_status": "SUCCESS",
+        "error_code": null,
+        "applied_rule_version": "R1",
+        "applied_length_factor": 1.0
+      }
+    ],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1013-A",
+        "sku": "HYG-1013",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 36,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1013-A",
+        "sku": "HYG-1013",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1013-A",
+        "supplier_id": "L-01",
+        "supplier_article_no": "HG-1013",
+        "sku": "HYG-1013",
+        "pack_version_id": "PK-1013-A",
+        "confirmed_at": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "UNCONFIRMED",
+        "case_qty": null,
+        "reference_source_id": null,
+        "approved_by": null
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1013",
+        "sku": "HYG-1013",
+        "target_record_id": "ERP-9013",
+        "wms_article_id": "WMS-1013",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1013",
+        "sku": "HYG-1013",
+        "accepted_pack_version_id": "PK-1013-A",
+        "known_case_qty": 36,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [
+      {
+        "sku": "HYG-1013",
+        "location_id": "DC-HH-01",
+        "snapshot_at": "2026-09-18T18:00:00",
+        "on_hand_base_qty": 100,
+        "reserved_base_qty": 0,
+        "blocked_base_qty": 0
+      }
+    ],
+    "releases": [
+      {
+        "release_id": "REL-1013-BRANCH_SUPPLY",
+        "sku": "HYG-1013",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1013-PROCUREMENT",
+        "sku": "HYG-1013",
+        "process_code": "PROCUREMENT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1013-WMS_RECEIPT",
+        "sku": "HYG-1013",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-10T00:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-010": {
+    "case": "INC-010",
+    "sku": "HYG-1016",
+    "reported_cases": [
+      {
+        "case_id": "INC-010",
+        "affected_reference": "HYG-1016",
+        "reported_symptom": "ARTICLE_NOT_ORDERABLE",
+        "reported_by": "Einkauf",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-012",
+        "case_id": "INC-010",
+        "source_table": "releases",
+        "source_record_reference": "REL-1016-PROCUREMENT",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Process approval/hold recorded"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1016",
+        "product_group": "KOERPERPFLEGE",
+        "description": "Handcreme 75 ml",
+        "origin_type": "NEW",
+        "lifecycle_status": "INTRO",
+        "base_uom": "EA",
+        "created_at": "2026-09-12T09:00:00"
+      }
+    ],
+    "legacy": [],
+    "scope": [],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9016",
+        "sku": "HYG-1016",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 24,
+        "pack_version_id": "PK-1016-A",
+        "base_uom": "EA",
+        "lifecycle_status": "INTRO"
+      }
+    ],
+    "migration_events": [],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1016-A",
+        "sku": "HYG-1016",
+        "level_code": "CASE",
+        "child_level_code": "EACH",
+        "units_of_child": 24,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 320.0,
+        "width_mm": 250.0,
+        "height_mm": 220.0,
+        "gross_weight_g": 5000.0,
+        "measure_evidence": "SYNTHETIC"
+      },
+      {
+        "pack_version_id": "PK-1016-A",
+        "sku": "HYG-1016",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1016-A",
+        "supplier_id": "L-03",
+        "supplier_article_no": "HG-1016",
+        "sku": "HYG-1016",
+        "pack_version_id": "PK-1016-A",
+        "confirmed_at": "2026-08-25T10:00:00",
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "APPROVED",
+        "case_qty": 24,
+        "reference_source_id": "SYN-LIEFERANT-L-03-A",
+        "approved_by": "EINKAUF-01"
+      }
+    ],
+    "interface_events": [
+      {
+        "event_id": "INT-1016",
+        "sku": "HYG-1016",
+        "target_record_id": "ERP-9016",
+        "wms_article_id": "WMS-1016",
+        "sent_at": "2026-09-15T13:00:00",
+        "received_at": "2026-09-15T13:00:02",
+        "processing_status": "DELIVERED",
+        "error_code": null,
+        "payload_version": "V1"
+      }
+    ],
+    "wms_snapshot": [
+      {
+        "snapshot_id": "WMS-2026-09-18",
+        "extracted_at": "2026-09-18T16:00:00",
+        "wms_article_id": "WMS-1016",
+        "sku": "HYG-1016",
+        "accepted_pack_version_id": "PK-1016-A",
+        "known_case_qty": 24,
+        "wms_status": "ACTIVE"
+      }
+    ],
+    "stock_snapshots": [],
+    "releases": [
+      {
+        "release_id": "REL-1016-BRANCH_SUPPLY",
+        "sku": "HYG-1016",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-12T09:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1016-PROCUREMENT",
+        "sku": "HYG-1016",
+        "process_code": "PROCUREMENT",
+        "decision": "BLOCK",
+        "reason_code": "PLANNED_LAUNCH_HOLD",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-12T09:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1016-WMS_RECEIPT",
+        "sku": "HYG-1016",
+        "process_code": "WMS_RECEIPT",
+        "decision": "ALLOW",
+        "reason_code": "CHECKS_APPROVED",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-12T09:00:00",
+        "valid_to": null
+      }
+    ]
+  },
+  "INC-011": {
+    "case": "INC-011",
+    "sku": "HYG-1017",
+    "reported_cases": [
+      {
+        "case_id": "INC-011",
+        "affected_reference": "HYG-1017",
+        "reported_symptom": "LAUNCH_NOT_RELEASED",
+        "reported_by": "Produktmanagement",
+        "reported_at": "2026-09-18T12:00:00",
+        "investigation_status": "OPEN"
+      }
+    ],
+    "issue_evidence": [
+      {
+        "evidence_id": "EVID-013",
+        "case_id": "INC-011",
+        "source_table": "supplier_references",
+        "source_record_reference": "REF-1017-A",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Supplier reference lacks confirmation"
+      }
+    ],
+    "correction_actions": [],
+    "product": [
+      {
+        "sku": "HYG-1017",
+        "product_group": "KOERPERPFLEGE",
+        "description": "Sonnenschutz 200 ml",
+        "origin_type": "NEW",
+        "lifecycle_status": "INTRO",
+        "base_uom": "EA",
+        "created_at": "2026-09-12T09:00:00"
+      }
+    ],
+    "legacy": [],
+    "scope": [],
+    "target_s2": [
+      {
+        "snapshot_id": "S2-2026-09-15",
+        "extracted_at": "2026-09-15T12:00:00",
+        "target_record_id": "ERP-9017",
+        "sku": "HYG-1017",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "case_qty": 12,
+        "pack_version_id": "PK-1017-A",
+        "base_uom": "EA",
+        "lifecycle_status": "INTRO"
+      }
+    ],
+    "migration_events": [],
+    "purchase_orders": [],
+    "asns": [],
+    "receipts": [],
+    "change_approvals": [],
+    "packaging_levels": [
+      {
+        "pack_version_id": "PK-1017-A",
+        "sku": "HYG-1017",
+        "level_code": "EACH",
+        "child_level_code": null,
+        "units_of_child": 1,
+        "gtin": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "PENDING",
+        "length_mm": 160.0,
+        "width_mm": 20.0,
+        "height_mm": 180.0,
+        "gross_weight_g": 50.0,
+        "measure_evidence": "SYNTHETIC"
+      }
+    ],
+    "supplier_references": [
+      {
+        "reference_id": "REF-1017-A",
+        "supplier_id": "L-01",
+        "supplier_article_no": "HG-1017",
+        "sku": "HYG-1017",
+        "pack_version_id": "PK-1017-A",
+        "confirmed_at": null,
+        "valid_from": "2026-01-01",
+        "valid_to": null,
+        "approval_status": "UNCONFIRMED",
+        "case_qty": null,
+        "reference_source_id": null,
+        "approved_by": null
+      }
+    ],
+    "interface_events": [],
+    "wms_snapshot": [],
+    "stock_snapshots": [],
+    "releases": [
+      {
+        "release_id": "REL-1017-BRANCH_SUPPLY",
+        "sku": "HYG-1017",
+        "process_code": "BRANCH_SUPPLY",
+        "decision": "REVIEW",
+        "reason_code": "UNCONFIRMED_PACKAGING",
+        "approved_by": "CATEGORY-01",
+        "valid_from": "2026-09-12T09:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1017-PROCUREMENT",
+        "sku": "HYG-1017",
+        "process_code": "PROCUREMENT",
+        "decision": "REVIEW",
+        "reason_code": "UNCONFIRMED_PACKAGING",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-12T09:00:00",
+        "valid_to": null
+      },
+      {
+        "release_id": "REL-1017-WMS_RECEIPT",
+        "sku": "HYG-1017",
+        "process_code": "WMS_RECEIPT",
+        "decision": "REVIEW",
+        "reason_code": "UNCONFIRMED_PACKAGING",
+        "approved_by": "MDM-01",
+        "valid_from": "2026-09-12T09:00:00",
+        "valid_to": null
+      }
+    ]
+  }
+}

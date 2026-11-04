@@ -1,0 +1,3 @@
+stage,snapshot_id,sku,expected_length_mm,actual_length_mm,dq02_status,pass_count,evaluable_count,pass_ratio,action_applied_in_simulated_sandbox,wms_dependent_retest_status,incident_status
+BEFORE,S2-2026-09-15,HYG-1006,203.2,200.0,DIMENSION_MISMATCH,12,13,0.923077,0,PENDING_WMS_RECHECK,OPEN
+AFTER,S3-2026-09-19,HYG-1006,203.2,203.2,PASS,13,13,1.0,1,PASSED_SIMULATED_WMS,CLOSED_IN_SIMULATION

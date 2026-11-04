@@ -1,0 +1,26 @@
+{
+  "quelle_db_sha256": "e212a6f317a593055aa62897d63697d613feba012427bb934157044241bc77be",
+  "basiskohorte": 500,
+  "incidents": 32,
+  "prioritaetsverteilung": {
+    "P1": 83,
+    "P2": 29,
+    "P3": 1,
+    "P4": 387
+  },
+  "allow_mit_fachlichem_pruefsignal": 104,
+  "incidents_v2_open": 32,
+  "kontrollzahlen": {
+    "DQ01_PASS": 319,
+    "DQ01_in_scope": 330,
+    "DQ02_PASS": 298,
+    "DQ02_evaluable": 310,
+    "DQ06_ALL_ALLOW": 471
+  },
+  "ausfuehrung": "3/4: dieselbe Risikomethode RISK-PILOT-1.1, nur V2-Schemaadapter und Kohortenasserts",
+  "risikomodell": {
+    "skala_auswirkung": "1-5 qualitativ angenommen; kein gemessener Schaden",
+    "prioritaet": "P1 wenn schwere Auffaelligkeit (>=4) mit ALLOW, HOLD oder WMS-Luecke; P2 schwer ohne solches Merkmal oder mittlere Abweichung; P3 dokumentierter Kontroll-/Reviewstatus; P4 kein registriertes Signal",
+    "keine_wahrscheinlichkeit": "Fehlende Expositionsdaten verbieten quantifizierte Eintrittswahrscheinlichkeit"
+  }
+}

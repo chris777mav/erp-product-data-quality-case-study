@@ -1,0 +1,30 @@
+{
+  "ausfuehrung": "2/4",
+  "datenherkunft": "V1, 20 synthetische Artikel, historischen Snapshot nicht modifiziert",
+  "quell_sha256_anfang_und_ende": "01b071db832cb21f25f7fc0e39811c101e78f66b0febea5720e068209e5b3ee7",
+  "fallakten": 11,
+  "akzeptanzszenarien": 16,
+  "szenarien_kontrollnachweis_PASS": 16,
+  "szenarien_inhaltlich_vollstaendig": 13,
+  "szenarien_begrenzt": 3,
+  "historische_incidents_offen": 11,
+  "isolierte_mutationstests": 7,
+  "isolierte_mutationstests_bestanden": 7,
+  "invarianten": 21,
+  "invarianten_bestanden": 21,
+  "verteilung": {
+    "P1": 6,
+    "P2": 4,
+    "P3": 1
+  },
+  "risk_model_sha256": "51b0bce1a87f758aa761ecfb9060e7f44ee1347fff272109c58be5f48da3c540",
+  "risikomodell_version": "RISK-PILOT-1.1",
+  "freigabe_500_uebertragung": "METHODISCH_BEDINGT__GRENZEN_DOKUMENTIERT",
+  "restluecken": [
+    "AT-10: physischer Restlieferstatus ohne zusätzliche Belege offen",
+    "AT-11: registrierte ALLOW-Freigaben trotz geblocktem Bestand; vorgeschlagene Review-Schranke noch keine bindende Richtlinie",
+    "AT-13: Eventfehler dokumentiert, Ursache und erfolgreicher echter Retry offen",
+    "7 DQ-SQL-Checks decken nicht 26 Geschäftsregeln vollständig ab",
+    "Keine reale Prozesswirkung und kein realer WMS-Test"
+  ]
+}

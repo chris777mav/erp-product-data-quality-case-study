@@ -1,0 +1,188 @@
+﻿table_name,column_name,sqlite_type,is_primary_key,requiredness,description,fk_reference,grain,source_system
+suppliers,supplier_id,TEXT,YES,YES,Supplier id; see table grain and source.,suppliers.supplier_id,One row per synthetic supplier,synthetic supplier master
+suppliers,supplier_name,TEXT,NO,YES_IN_COMPLETE_RECORD,Supplier name; see table grain and source.,,One row per synthetic supplier,synthetic supplier master
+suppliers,supplier_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Supplier status; see table grain and source.,,One row per synthetic supplier,synthetic supplier master
+products,sku,TEXT,YES,YES,"Internal SKU identifier, not manufacturer product identifier",products.sku,One current product/SKU in simulated business inventory,synthetic product master
+products,product_group,TEXT,NO,YES_IN_COMPLETE_RECORD,Product group; see table grain and source.,,One current product/SKU in simulated business inventory,synthetic product master
+products,description,TEXT,NO,YES_IN_COMPLETE_RECORD,Description; see table grain and source.,,One current product/SKU in simulated business inventory,synthetic product master
+products,origin_type,TEXT,NO,YES_IN_COMPLETE_RECORD,MIGRATED or NEW. NEW SKUs have no legacy migration obligation.,,One current product/SKU in simulated business inventory,synthetic product master
+products,lifecycle_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Lifecycle status; see table grain and source.,,One current product/SKU in simulated business inventory,synthetic product master
+products,base_uom,TEXT,NO,YES_IN_COMPLETE_RECORD,EA only in the bounded pilot.,,One current product/SKU in simulated business inventory,synthetic product master
+products,created_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Created at; see table grain and source.,,One current product/SKU in simulated business inventory,synthetic product master
+supplier_articles,supplier_id,TEXT,YES,YES,Supplier id; see table grain and source.,suppliers.supplier_id,One supplier-item-to-SKU assignment with validity start,synthetic supplier master
+supplier_articles,supplier_article_no,TEXT,YES,YES,Supplier article no; see table grain and source.,supplier_articles.supplier_article_no (qualified by supplier_id),One supplier-item-to-SKU assignment with validity start,synthetic supplier master
+supplier_articles,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One supplier-item-to-SKU assignment with validity start,synthetic supplier master
+supplier_articles,valid_from,TEXT,YES,YES,Valid from; see table grain and source.,,One supplier-item-to-SKU assignment with validity start,synthetic supplier master
+supplier_articles,valid_to,TEXT,NO,CONDITIONAL,Valid to; see table grain and source.,,One supplier-item-to-SKU assignment with validity start,synthetic supplier master
+supplier_articles,approval_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Approval status; see table grain and source.,,One supplier-item-to-SKU assignment with validity start,synthetic supplier master
+supplier_references,reference_id,TEXT,YES,YES,Reference id; see table grain and source.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,supplier_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Supplier id; see table grain and source.,suppliers.supplier_id,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,supplier_article_no,TEXT,NO,YES_IN_COMPLETE_RECORD,Supplier article no; see table grain and source.,supplier_articles.supplier_article_no (qualified by supplier_id),One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,pack_version_id,TEXT,NO,CONDITIONAL,Versioned packaging specification; requires matching SKU and valid time.,packaging_levels.pack_version_id (qualified by sku/level),One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,confirmed_at,TEXT,NO,CONDITIONAL,Moment supplier reference was confirmed; blank = no evidence.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,valid_from,TEXT,NO,YES_IN_COMPLETE_RECORD,Valid from; see table grain and source.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,valid_to,TEXT,NO,CONDITIONAL,Valid to; see table grain and source.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,approval_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Approval status; see table grain and source.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,case_qty,INTEGER,NO,CONDITIONAL,Number of EA per CASE at identified time/version.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,reference_source_id,TEXT,NO,YES_IN_COMPLETE_RECORD,"Synthetic supplier confirmation artifact identifier, not external proof.",,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+supplier_references,approved_by,TEXT,NO,CONDITIONAL,Approved by; see table grain and source.,,One time-versioned (sometimes unconfirmed) supplier reference pack assertion,synthetic supplier confirmation fixtures
+packaging_levels,pack_version_id,TEXT,YES,YES,Versioned packaging specification; requires matching SKU and valid time.,packaging_levels.pack_version_id (qualified by sku/level),One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,level_code,TEXT,YES,YES,Level code; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,child_level_code,TEXT,NO,YES_IN_COMPLETE_RECORD,Child level code; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,units_of_child,INTEGER,NO,YES_IN_COMPLETE_RECORD,Positive integer count of contained child level; EACH=1.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,gtin,TEXT,NO,CONDITIONAL,"Optional GTIN value. Blank means unknown/not supplied, not invalid check digit.",,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,valid_from,TEXT,NO,YES_IN_COMPLETE_RECORD,Valid from; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,valid_to,TEXT,NO,CONDITIONAL,Valid to; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,approval_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Approval status; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,length_mm,REAL,NO,YES_IN_COMPLETE_RECORD,Target normalized length in millimetres; correctness requires approved mapping and reference.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,width_mm,REAL,NO,YES_IN_COMPLETE_RECORD,Width mm; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,height_mm,REAL,NO,YES_IN_COMPLETE_RECORD,Height mm; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,gross_weight_g,REAL,NO,YES_IN_COMPLETE_RECORD,Gross weight g; see table grain and source.,,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+packaging_levels,measure_evidence,TEXT,NO,YES_IN_COMPLETE_RECORD,"SYNTHETIC implies plausible fixtures, not independent technical product truth.",,One pack level (EACH/CASE) per SKU and version,synthetic packing master
+legacy_snapshot,snapshot_id,TEXT,YES,YES,Snapshot id; see table grain and source.,,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,extracted_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Extracted at; see table grain and source.,,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,legacy_record_id,TEXT,YES,YES,Legacy record id; see table grain and source.,legacy_snapshot.legacy_record_id,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,length_value,REAL,NO,YES_IN_COMPLETE_RECORD,Length value; see table grain and source.,,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,dimension_uom,TEXT,NO,YES_IN_COMPLETE_RECORD,"Original dimension measurement unit; IN or MM, explicit.",,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,case_qty,INTEGER,NO,CONDITIONAL,Number of EA per CASE at identified time/version.,,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,base_uom,TEXT,NO,YES_IN_COMPLETE_RECORD,EA only in the bounded pilot.,,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+legacy_snapshot,lifecycle_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Lifecycle status; see table grain and source.,,One legacy ERP record at S0 snapshot,synthetic legacy extract T0
+migration_scope,migration_run_id,TEXT,YES,YES,Migration run id; see table grain and source.,,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,legacy_record_id,TEXT,YES,YES,Legacy record id; see table grain and source.,legacy_snapshot.legacy_record_id,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,in_scope,TEXT,NO,YES_IN_COMPLETE_RECORD,YES/NO/UNKNOWN approved migration obligation. Only YES requires loading.,,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,exclusion_reason,TEXT,NO,CONDITIONAL,Exclusion reason; see table grain and source.,,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,expected_target_record_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Expected target ID from approved mapping; not evidence that record exists.,,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,mapping_rule_version,TEXT,NO,YES_IN_COMPLETE_RECORD,Mapping rule version; see table grain and source.,,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,approved_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Approved at; see table grain and source.,,One source record and one migration run scope decision,synthetic approved migration scope
+migration_scope,approved_by,TEXT,NO,CONDITIONAL,Approved by; see table grain and source.,,One source record and one migration run scope decision,synthetic approved migration scope
+mapping_rules,mapping_rule_id,TEXT,YES,YES,Mapping rule id; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,rule_version,TEXT,YES,YES,Rule version; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,source_field,TEXT,NO,YES_IN_COMPLETE_RECORD,Source field; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,target_field,TEXT,NO,YES_IN_COMPLETE_RECORD,Target field; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,transformation,TEXT,NO,YES_IN_COMPLETE_RECORD,Transformation; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,factor,REAL,NO,YES_IN_COMPLETE_RECORD,Factor; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,valid_from,TEXT,NO,YES_IN_COMPLETE_RECORD,Valid from; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,valid_to,TEXT,NO,CONDITIONAL,Valid to; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,approval_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Approval status; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+mapping_rules,approved_by,TEXT,NO,CONDITIONAL,Approved by; see table grain and source.,,One mapping rule and rule version,synthetic migration specification
+migration_events,event_id,TEXT,YES,YES,Event id; see table grain and source.,,One observed migration import event,synthetic migration log T1
+migration_events,migration_run_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Migration run id; see table grain and source.,,One observed migration import event,synthetic migration log T1
+migration_events,legacy_record_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Legacy record id; see table grain and source.,legacy_snapshot.legacy_record_id,One observed migration import event,synthetic migration log T1
+migration_events,target_record_id,TEXT,NO,CONDITIONAL,Target record id; see table grain and source.,target_snapshot.target_record_id (snapshot-scoped),One observed migration import event,synthetic migration log T1
+migration_events,sent_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Sent at; see table grain and source.,,One observed migration import event,synthetic migration log T1
+migration_events,received_at,TEXT,NO,CONDITIONAL,Received at; see table grain and source.,,One observed migration import event,synthetic migration log T1
+migration_events,load_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Load status; see table grain and source.,,One observed migration import event,synthetic migration log T1
+migration_events,error_code,TEXT,NO,YES_IN_COMPLETE_RECORD,Error code; see table grain and source.,,One observed migration import event,synthetic migration log T1
+migration_events,applied_rule_version,TEXT,NO,YES_IN_COMPLETE_RECORD,Rule recorded as executed; compare to approved rule.,,One observed migration import event,synthetic migration log T1
+migration_events,applied_length_factor,REAL,NO,YES_IN_COMPLETE_RECORD,Actual multiplier documented on migrated dimension.,,One observed migration import event,synthetic migration log T1
+target_snapshot,snapshot_id,TEXT,YES,YES,Snapshot id; see table grain and source.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,extracted_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Extracted at; see table grain and source.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,target_record_id,TEXT,YES,YES,Target record id; see table grain and source.,target_snapshot.target_record_id (snapshot-scoped),One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,length_mm,REAL,NO,YES_IN_COMPLETE_RECORD,Target normalized length in millimetres; correctness requires approved mapping and reference.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,width_mm,REAL,NO,YES_IN_COMPLETE_RECORD,Width mm; see table grain and source.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,height_mm,REAL,NO,YES_IN_COMPLETE_RECORD,Height mm; see table grain and source.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,case_qty,INTEGER,NO,CONDITIONAL,Number of EA per CASE at identified time/version.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,pack_version_id,TEXT,NO,CONDITIONAL,Versioned packaging specification; requires matching SKU and valid time.,packaging_levels.pack_version_id (qualified by sku/level),One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,base_uom,TEXT,NO,YES_IN_COMPLETE_RECORD,EA only in the bounded pilot.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+target_snapshot,lifecycle_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Lifecycle status; see table grain and source.,,One target ERP system record in one dated snapshot,synthetic target ERP extracts T1 and T2
+change_approvals,change_approval_id,TEXT,YES,YES,Time-bound explicitly approved supplier packaging change.,change_approvals.change_approval_id,One documented pack-change approval,synthetic buyer approval
+change_approvals,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One documented pack-change approval,synthetic buyer approval
+change_approvals,approved_pack_version_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Approved pack version id; see table grain and source.,packaging_levels.pack_version_id (qualified by sku/level),One documented pack-change approval,synthetic buyer approval
+change_approvals,approved_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Approved at; see table grain and source.,,One documented pack-change approval,synthetic buyer approval
+change_approvals,effective_from,TEXT,NO,YES_IN_COMPLETE_RECORD,Effective from; see table grain and source.,,One documented pack-change approval,synthetic buyer approval
+change_approvals,effective_to,TEXT,NO,YES_IN_COMPLETE_RECORD,Effective to; see table grain and source.,,One documented pack-change approval,synthetic buyer approval
+change_approvals,approved_by,TEXT,NO,CONDITIONAL,Approved by; see table grain and source.,,One documented pack-change approval,synthetic buyer approval
+change_approvals,change_reason,TEXT,NO,YES_IN_COMPLETE_RECORD,Change reason; see table grain and source.,,One documented pack-change approval,synthetic buyer approval
+releases,release_id,TEXT,YES,YES,Release id; see table grain and source.,,One SKU/process approval decision,synthetic master data/process approval
+releases,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One SKU/process approval decision,synthetic master data/process approval
+releases,process_code,TEXT,NO,YES_IN_COMPLETE_RECORD,Process code; see table grain and source.,,One SKU/process approval decision,synthetic master data/process approval
+releases,decision,TEXT,NO,YES_IN_COMPLETE_RECORD,"Approval verdict for a named process, not global product quality.",,One SKU/process approval decision,synthetic master data/process approval
+releases,reason_code,TEXT,NO,YES_IN_COMPLETE_RECORD,Reason code; see table grain and source.,,One SKU/process approval decision,synthetic master data/process approval
+releases,approved_by,TEXT,NO,CONDITIONAL,Approved by; see table grain and source.,,One SKU/process approval decision,synthetic master data/process approval
+releases,valid_from,TEXT,NO,YES_IN_COMPLETE_RECORD,Valid from; see table grain and source.,,One SKU/process approval decision,synthetic master data/process approval
+releases,valid_to,TEXT,NO,CONDITIONAL,Valid to; see table grain and source.,,One SKU/process approval decision,synthetic master data/process approval
+wms_snapshot,snapshot_id,TEXT,YES,YES,Snapshot id; see table grain and source.,,One WMS article at WMS snapshot,synthetic warehouse master extract T5
+wms_snapshot,extracted_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Extracted at; see table grain and source.,,One WMS article at WMS snapshot,synthetic warehouse master extract T5
+wms_snapshot,wms_article_id,TEXT,YES,YES,Wms article id; see table grain and source.,wms_snapshot.wms_article_id (snapshot-scoped),One WMS article at WMS snapshot,synthetic warehouse master extract T5
+wms_snapshot,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One WMS article at WMS snapshot,synthetic warehouse master extract T5
+wms_snapshot,accepted_pack_version_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Accepted pack version id; see table grain and source.,,One WMS article at WMS snapshot,synthetic warehouse master extract T5
+wms_snapshot,known_case_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,Known case qty; see table grain and source.,,One WMS article at WMS snapshot,synthetic warehouse master extract T5
+wms_snapshot,wms_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Wms status; see table grain and source.,,One WMS article at WMS snapshot,synthetic warehouse master extract T5
+interface_events,event_id,TEXT,YES,YES,Event id; see table grain and source.,,One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,target_record_id,TEXT,NO,CONDITIONAL,Target record id; see table grain and source.,target_snapshot.target_record_id (snapshot-scoped),One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,wms_article_id,TEXT,NO,CONDITIONAL,Wms article id; see table grain and source.,wms_snapshot.wms_article_id (snapshot-scoped),One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,sent_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Sent at; see table grain and source.,,One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,received_at,TEXT,NO,CONDITIONAL,Received at; see table grain and source.,,One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,processing_status,TEXT,NO,YES_IN_COMPLETE_RECORD,"Document/system processing outcome, not automatically confirmed root cause.",,One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,error_code,TEXT,NO,YES_IN_COMPLETE_RECORD,Error code; see table grain and source.,,One ERP-to-WMS integration event,synthetic interface processing log
+interface_events,payload_version,TEXT,NO,YES_IN_COMPLETE_RECORD,Payload version; see table grain and source.,,One ERP-to-WMS integration event,synthetic interface processing log
+purchase_orders,po_id,TEXT,YES,YES,Po id; see table grain and source.,purchase_orders.po_id (qualified by po_line_id),One purchase order line,synthetic purchasing orders
+purchase_orders,po_line_id,TEXT,YES,YES,Po line id; see table grain and source.,,One purchase order line,synthetic purchasing orders
+purchase_orders,supplier_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Supplier id; see table grain and source.,suppliers.supplier_id,One purchase order line,synthetic purchasing orders
+purchase_orders,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One purchase order line,synthetic purchasing orders
+purchase_orders,ordered_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,Order quantity in order_uom (CASE).,,One purchase order line,synthetic purchasing orders
+purchase_orders,order_uom,TEXT,NO,YES_IN_COMPLETE_RECORD,CASE in purchase-order pilot; convert using expected_case_qty.,,One purchase order line,synthetic purchasing orders
+purchase_orders,ordered_base_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,Order quantity measured in EA. Compare to CASE count × quantity.,,One purchase order line,synthetic purchasing orders
+purchase_orders,expected_pack_version_id,TEXT,NO,YES_IN_COMPLETE_RECORD,PO agreed packaging version at purchase time.,packaging_levels.pack_version_id (qualified by sku/level),One purchase order line,synthetic purchasing orders
+purchase_orders,expected_case_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,Expected case qty; see table grain and source.,,One purchase order line,synthetic purchasing orders
+purchase_orders,expected_case_count,INTEGER,NO,YES_IN_COMPLETE_RECORD,Expected case count; see table grain and source.,,One purchase order line,synthetic purchasing orders
+purchase_orders,order_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Order at; see table grain and source.,,One purchase order line,synthetic purchasing orders
+purchase_orders,order_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Order status; see table grain and source.,,One purchase order line,synthetic purchasing orders
+asns,asn_id,TEXT,YES,YES,Asn id; see table grain and source.,asns.asn_id (qualified by asn_line_id),One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,asn_line_id,TEXT,YES,YES,Asn line id; see table grain and source.,,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,po_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Po id; see table grain and source.,purchase_orders.po_id (qualified by po_line_id),One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,po_line_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Po line id; see table grain and source.,,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,sku,TEXT,NO,YES_IN_COMPLETE_RECORD,"Internal SKU identifier, not manufacturer product identifier",products.sku,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,sent_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Sent at; see table grain and source.,,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,package_count,INTEGER,NO,YES_IN_COMPLETE_RECORD,Number of cartons in ASN / receipt.,,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,each_per_package,INTEGER,NO,YES_IN_COMPLETE_RECORD,Eaches contained in one carton for the specific document.,,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,announced_base_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,EA = package_count × each_per_package for ASN.,,One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,pack_version_id,TEXT,NO,CONDITIONAL,Versioned packaging specification; requires matching SKU and valid time.,packaging_levels.pack_version_id (qualified by sku/level),One advance shipping notice line linked to PO line,synthetic supplier ASN
+asns,change_approval_id,TEXT,NO,CONDITIONAL,Time-bound explicitly approved supplier packaging change.,change_approvals.change_approval_id,One advance shipping notice line linked to PO line,synthetic supplier ASN
+receipts,receipt_id,TEXT,YES,YES,Receipt id; see table grain and source.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,receipt_line_id,TEXT,YES,YES,Receipt line id; see table grain and source.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,asn_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Asn id; see table grain and source.,asns.asn_id (qualified by asn_line_id),One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,asn_line_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Asn line id; see table grain and source.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,po_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Po id; see table grain and source.,purchase_orders.po_id (qualified by po_line_id),One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,po_line_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Po line id; see table grain and source.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,wms_article_id,TEXT,NO,CONDITIONAL,Wms article id; see table grain and source.,wms_snapshot.wms_article_id (snapshot-scoped),One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,received_at,TEXT,NO,CONDITIONAL,Received at; see table grain and source.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,package_count,INTEGER,NO,YES_IN_COMPLETE_RECORD,Number of cartons in ASN / receipt.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,each_per_package,INTEGER,NO,YES_IN_COMPLETE_RECORD,Eaches contained in one carton for the specific document.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,received_base_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,EA = package_count × each_per_package for receipt.,,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+receipts,processing_status,TEXT,NO,YES_IN_COMPLETE_RECORD,"Document/system processing outcome, not automatically confirmed root cause.",,One received shipment line linked to ASN and PO line,synthetic WMS receipts
+stock_snapshots,sku,TEXT,YES,YES,"Internal SKU identifier, not manufacturer product identifier",products.sku,One SKU/location/time WMS stock position,synthetic WMS stock T5
+stock_snapshots,location_id,TEXT,YES,YES,Location id; see table grain and source.,,One SKU/location/time WMS stock position,synthetic WMS stock T5
+stock_snapshots,snapshot_at,TEXT,YES,YES,Snapshot at; see table grain and source.,,One SKU/location/time WMS stock position,synthetic WMS stock T5
+stock_snapshots,on_hand_base_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,System total units physically attributed to location incl quarantined/blocked stock.,,One SKU/location/time WMS stock position,synthetic WMS stock T5
+stock_snapshots,reserved_base_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,Units committed/reserved within same stock snapshot.,,One SKU/location/time WMS stock position,synthetic WMS stock T5
+stock_snapshots,blocked_base_qty,INTEGER,NO,YES_IN_COMPLETE_RECORD,Units unavailable for fulfillment due to quality/HOLD.,,One SKU/location/time WMS stock position,synthetic WMS stock T5
+reported_cases,case_id,TEXT,YES,YES,Case id; see table grain and source.,reported_cases.case_id,One symptom report without confirmed cause,synthetic business symptom reports
+reported_cases,affected_reference,TEXT,NO,YES_IN_COMPLETE_RECORD,Affected reference; see table grain and source.,,One symptom report without confirmed cause,synthetic business symptom reports
+reported_cases,reported_symptom,TEXT,NO,YES_IN_COMPLETE_RECORD,Reported symptom; see table grain and source.,,One symptom report without confirmed cause,synthetic business symptom reports
+reported_cases,reported_by,TEXT,NO,YES_IN_COMPLETE_RECORD,Reported by; see table grain and source.,,One symptom report without confirmed cause,synthetic business symptom reports
+reported_cases,reported_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Reported at; see table grain and source.,,One symptom report without confirmed cause,synthetic business symptom reports
+reported_cases,investigation_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Investigation status; see table grain and source.,,One symptom report without confirmed cause,synthetic business symptom reports
+issue_evidence,evidence_id,TEXT,YES,YES,Evidence id; see table grain and source.,,One dated evidence observation linked to a reported issue,synthetic evidence index
+issue_evidence,case_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Case id; see table grain and source.,reported_cases.case_id,One dated evidence observation linked to a reported issue,synthetic evidence index
+issue_evidence,source_table,TEXT,NO,YES_IN_COMPLETE_RECORD,Source table; see table grain and source.,,One dated evidence observation linked to a reported issue,synthetic evidence index
+issue_evidence,source_record_reference,TEXT,NO,YES_IN_COMPLETE_RECORD,"Source record key or search key, possibly deliberately unresolved.",,One dated evidence observation linked to a reported issue,synthetic evidence index
+issue_evidence,evidence_availability,TEXT,NO,YES_IN_COMPLETE_RECORD,"AVAILABLE/MISSING/UNCONFIRMED describes evidence access, not root cause.",,One dated evidence observation linked to a reported issue,synthetic evidence index
+issue_evidence,observed_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Observed at; see table grain and source.,,One dated evidence observation linked to a reported issue,synthetic evidence index
+issue_evidence,observation,TEXT,NO,YES_IN_COMPLETE_RECORD,Observation; see table grain and source.,,One dated evidence observation linked to a reported issue,synthetic evidence index
+correction_actions,action_id,TEXT,YES,YES,Action id; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,case_id,TEXT,NO,YES_IN_COMPLETE_RECORD,Case id; see table grain and source.,reported_cases.case_id,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,affected_reference,TEXT,NO,YES_IN_COMPLETE_RECORD,Affected reference; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,field_name,TEXT,NO,YES_IN_COMPLETE_RECORD,Field name; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,old_value,REAL,NO,YES_IN_COMPLETE_RECORD,Old value; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,proposed_value,REAL,NO,YES_IN_COMPLETE_RECORD,Proposed value; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,approved_by,TEXT,NO,CONDITIONAL,Approved by; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,approved_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Approved at; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,applied_at,TEXT,NO,YES_IN_COMPLETE_RECORD,Applied at; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,dependent_retest_status,TEXT,NO,YES_IN_COMPLETE_RECORD,"Completion evidence for dependent tests, including WMS downstream retest.",,One proposed corrective action and retest lifecycle,synthetic suggested fixes
+correction_actions,closure_status,TEXT,NO,YES_IN_COMPLETE_RECORD,Closure status; see table grain and source.,,One proposed corrective action and retest lifecycle,synthetic suggested fixes

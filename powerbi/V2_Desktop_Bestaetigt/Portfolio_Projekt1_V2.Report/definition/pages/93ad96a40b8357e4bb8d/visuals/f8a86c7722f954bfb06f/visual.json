@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f8a86c7722f954bfb06f",
+  "position": {
+    "x": 990,
+    "y": 95,
+    "z": 1000,
+    "height": 112,
+    "width": 250,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "INC-002: Sandbox-Korrektur 200,0 → 203,2 mm; abhängiger WMS-Retest AUSSTEHEND; Incident weiterhin OFFEN.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

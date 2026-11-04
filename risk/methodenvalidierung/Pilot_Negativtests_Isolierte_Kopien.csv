@@ -1,0 +1,8 @@
+﻿test;status;detail
+NEG-01 Ziel ergänzt: DQ01 PASS, aber Migrationslog bleibt fehlend;PASS;Der Ziel-Snapshot alleine schließt die historische Root-Cause-Lücke nicht.
+NEG-02 Dimension richtig, falsches Mappingereignis weiter nachweisbar;PASS;Korrektur des Zielwerts heilt den nichtgenehmigten historischen Lauf nicht.
+NEG-03 Verpackung berichtigt, HOLD bleibt bestehen;PASS;Zwei unabhängige Kontrollen dürfen nicht als eine erfolgreiche End-to-End-Freigabe verkauft werden.
+NEG-04 Fehlende Genehmigungsrolle ist kein PASS;PASS;Eine formal unvollständige Genehmigung kann nicht stillschweigend gültig sein.
+NEG-05 Fehlender Receipt-Beleg wird durch simulierte Nachbuchung aufgelöst;PASS;"Nur künstliche Nachbuchung im Testzweig; kein Beleg einer echten Warenbewegung."
+NEG-06 Referenz bestätigt: unbestätigt-Signal fällt dynamisch weg;PASS;Offener historischer Incident darf ohne Abschlussbeleg weiterhin administrativ markiert sein.
+NEG-07 WMS-Snapshot ergänzt: WMS-Fehlsignal fällt weg;PASS;Ein ergänzter Datensatz beweist noch keine historisch korrekte Übermittlung.

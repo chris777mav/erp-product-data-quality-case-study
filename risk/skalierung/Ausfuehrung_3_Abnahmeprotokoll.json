@@ -1,0 +1,146 @@
+{
+  "version": "RISK-PILOT-1.1",
+  "method_contract_sha256": "3a2934b935c776284b3e9d838b73672658df6889d5cc4f1423a458b807baee15",
+  "pilot_method_code_sha256": "51b0bce1a87f758aa761ecfb9060e7f44ee1347fff272109c58be5f48da3c540",
+  "v2_raw_sqlite_sha256": "e212a6f317a593055aa62897d63697d613feba012427bb934157044241bc77be",
+  "v1_raw_sqlite_sha256": "01b071db832cb21f25f7fc0e39811c101e78f66b0febea5720e068209e5b3ee7",
+  "rows": {
+    "v2_products": 500,
+    "v2_cases": 32,
+    "v2_asn_positions": 191,
+    "v2_receipts_source": 181,
+    "v2_receipts_sandbox": 182
+  },
+  "source_tables": 21,
+  "v1_pilot_20_score_signal_regression": "20/20 IDENTISCH",
+  "status_500": {
+    "P1": 83,
+    "P2": 29,
+    "P3": 1,
+    "P4": 387
+  },
+  "allow_with_weighted_warning_500": 104,
+  "migration_nonpass_allow_overlap": 11,
+  "unweighted_coverage_flags_skus": 28,
+  "case_reconciliation": {
+    "all_cases": 32,
+    "direct_SKU": 28,
+    "indirect_PO_Receipt_ASN": 4,
+    "distinct_case_skus": 32,
+    "unique_risk_or_coverage_flag_skus": 129,
+    "risk_or_coverage_flags_without_mapped_case_skus": 97,
+    "original_v2_report_direct_sku_only_figure": 101
+  },
+  "before_after_sandbox": {
+    "DQ01_PASS": {
+      "source": 319,
+      "simulation": 320,
+      "difference": 1
+    },
+    "DQ02_PASS": {
+      "source": 298,
+      "simulation": 301,
+      "difference": 3
+    },
+    "DQ02_EVALUABLE": {
+      "source": 310,
+      "simulation": 311,
+      "difference": 1
+    },
+    "DQ04_PASS": {
+      "source": 176,
+      "simulation": 177,
+      "difference": 1
+    },
+    "DQ05_RECONCILED_POSTED": {
+      "source": 135,
+      "simulation": 136,
+      "difference": 1
+    },
+    "DQ03_UNAPPROVED_RULE": {
+      "source": 11,
+      "simulation": 11,
+      "difference": 0
+    },
+    "DQ07_OPEN": {
+      "source": 32,
+      "simulation": 32,
+      "difference": 0
+    },
+    "DQ06_ALL_ALLOW": {
+      "source": 471,
+      "simulation": 471,
+      "difference": 0
+    }
+  },
+  "changes_test_only": [
+    {
+      "id": "SIM-A",
+      "sku": "HYG-2058",
+      "art": "TARGET_DIMENSION_RETEST",
+      "vorher": 151.76,
+      "nachher": 154.96,
+      "annahme": "Hypothetische genehmigte Zielwertkorrektur nur im S2-Testsnapshot, kein WMS-End-to-End-Nachweis",
+      "status": "TEST_ONLY"
+    },
+    {
+      "id": "SIM-B",
+      "sku": "HYG-2097",
+      "art": "TARGET_IDENTITAET_RETEST",
+      "vorher": "ERP-12097-BAD",
+      "nachher": "ERP-12097",
+      "annahme": "Simulierter Identitätsabgleich; produktive Mapping-/Duplikatklärung bleibt erforderlich",
+      "status": "TEST_ONLY"
+    },
+    {
+      "id": "SIM-C",
+      "sku": "HYG-2114",
+      "art": "RECEIPT_NACHWEIS_RETEST",
+      "vorher": "MISSING_RECEIPT",
+      "nachher": "SIMULATED_POSTED_RECEIPT",
+      "annahme": "Erfundener Posteingang ausschließlich zur Testprobe; kein Beleg realer Lieferung und keine Nachbuchung in historischen Daten",
+      "status": "TEST_ONLY"
+    },
+    {
+      "id": "SIM-D",
+      "sku": "HYG-2111",
+      "art": "ASN_PACKVERSION_RETEST",
+      "vorher": "PK-2111-UNKNOWN",
+      "nachher": "PK-2111-A",
+      "annahme": "Geänderte ASN-Version allein beweist keine bestätigte Lieferantenpackung; WMS- und Lieferantenfreigabe bleiben getrennt",
+      "status": "TEST_ONLY"
+    },
+    {
+      "id": "SIM-E",
+      "sku": "HYG-1006",
+      "art": "NEGATIVTEST_REGELPROTOKOLL_BLEIBT",
+      "vorher": 200.0,
+      "nachher": 203.2,
+      "annahme": "Korrigierter Zielwert allein korrigiert weder historisches unzulässiges Mapping-Event noch schließt er den Incident",
+      "status": "NEGATIVE_CONTROL_ONLY"
+    }
+  ],
+  "tests": {
+    "sku_grain_500_distinct": "PASS",
+    "migration_scope_330": "PASS",
+    "asn_line_grain_191": "PASS",
+    "incidents_32_resolved_exactly_one_sku": "PASS",
+    "pilot_method_unaltered": "PASS",
+    "v1_risk_results_20_of_20_identical": "PASS",
+    "original_v1_v2_unchanged": "PASS",
+    "sql_controls_7_run_baseline_and_sandbox": "PASS",
+    "validity_sqlite_integrity_foreign_keys": "PASS",
+    "negative_mapping_control": "PASS",
+    "no_auto_release_or_incident_closure": "PASS",
+    "no_unintended_non_target_record_changes": "PASS",
+    "four_distinct_test_only_corrective_cases_plus_one_negative_control": "PASS"
+  },
+  "caveats": [
+    "Kriterien und Risikostufen sind qualitative fachliche Annahmen; keine Empirie oder monetäre Schadensmessung.",
+    "RISK-PILOT-1.1 bewertet bestimmte Nicht-Auswertbarkeiten und fehlende Event-/Release-Sonderfälle nicht mit separaten Gewichten; sie stehen im zusätzlichen manuellen Prüfregister.",
+    "Kritische P1-/P2-Kategorien sind verdachtsbasierte priorisierte Reviewaufgaben, keine nachgewiesenen Fehler und keine bindende Policy.",
+    "Sandbox-Nachbuchung beweist keine Wareneingangsrealität; alle 32 historische V2-Incidents bleiben OPEN.",
+    "Die sieben SQL-Prüfungen implementieren nicht sämtliche 26 Geschäftsregeln.",
+    "S2 und as-of Freigabe-Snapshot 18.09 sind zeitlich verschieden; Kreuzsignale verlangen fachliche Zeitprüfung."
+  ]
+}

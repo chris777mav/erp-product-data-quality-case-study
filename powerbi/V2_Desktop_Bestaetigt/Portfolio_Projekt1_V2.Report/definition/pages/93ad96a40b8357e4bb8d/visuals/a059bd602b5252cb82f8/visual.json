@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "a059bd602b5252cb82f8",
+  "position": {
+    "x": 20,
+    "y": 250,
+    "z": 1000,
+    "height": 245,
+    "width": 375,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "evidence_status"
+                }
+              },
+              "queryRef": "V2_DQ07.evidence_status",
+              "nativeQueryRef": "evidence_status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "Incidents_OPEN"
+                }
+              },
+              "queryRef": "V2_DQ07.Incidents_OPEN",
+              "nativeQueryRef": "Incidents_OPEN"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'V2: Evidenz-Status'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

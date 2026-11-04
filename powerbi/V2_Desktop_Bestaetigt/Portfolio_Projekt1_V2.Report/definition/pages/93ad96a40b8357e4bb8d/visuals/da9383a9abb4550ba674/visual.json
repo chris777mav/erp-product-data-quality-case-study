@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "da9383a9abb4550ba674",
+  "position": {
+    "x": 500,
+    "y": 90,
+    "z": 1000,
+    "height": 112,
+    "width": 220,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "INC002_Sandbox"
+                    }
+                  },
+                  "Property": "INC002_Vorher_DQ02"
+                }
+              },
+              "queryRef": "INC002_Sandbox.INC002_Vorher_DQ02",
+              "nativeQueryRef": "INC002_Vorher_DQ02"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'INC002 DQ02 vorher'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

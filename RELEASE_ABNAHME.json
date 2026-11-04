@@ -1,0 +1,69 @@
+{
+  "stand": "2026-11-03",
+  "projekt": "Produktdatenqualität und ERP-Migration - integrierte synthetische Fallstudie",
+  "pruefergebnis": "TECHNISCHE_FINAL_ABNAHME_PASS_MIT_DEKLARIERTEN_GELTUNGSGRENZEN",
+  "ausfuehrung": "4/4",
+  "pdf_seiten": 48,
+  "pdf_anzahl": 1,
+  "pdf_sha256": "0f0bf868f03d4d32fe68ef9ec16bbd075ac794e56d6ef8c5bfc45db060e5a770",
+  "kapitel_seiten": {
+    "01": 4,
+    "02": 5,
+    "03": 8,
+    "04": 15,
+    "05": 17,
+    "06": 22,
+    "07": 25,
+    "08": 26,
+    "09": 29,
+    "10": 30,
+    "11": 37,
+    "12": 43,
+    "13": 45,
+    "14": 46,
+    "15": 47,
+    "16": 48
+  },
+  "checks": {
+    "Eine einzige PDF": "PASS",
+    "Lesbares PDF": "PASS",
+    "16 Kapitel": "PASS",
+    "Inhaltsverzeichnis mit Nummern": "PASS",
+    "Zweierlei Datenpopulation": "PASS",
+    "Risiko-Kennzahlen": "PASS",
+    "Provenienz und Quellen": "PASS",
+    "Aussagegrenzen": "PASS",
+    "Keine Coaching-Formulierungen": "PASS",
+    "Screenshots vorhanden": "PASS",
+    "Alle Seiten lesbar": "PASS",
+    "Original-20-SKU-SHA": "PASS",
+    "Original-500-SKU-SHA": "PASS",
+    "Technisches Reproduktionspaket": "PASS",
+    "Alle drei Ausfuehrungsprotokolle vorhanden": "PASS",
+    "Seitenreferenzen eindeutig": "PASS",
+    "Textrahmen auf allen 48 Seiten": "PASS"
+  },
+  "pruefprotokolle_verfuegbar": {
+    "technischer_kern_und_risiko": "PASS",
+    "pilot_tiefenpruefung": "PASS",
+    "500er_risiko_sandbox": "PASS"
+  },
+  "tatsaechlich_validiert": [
+    "20/20 Pilotrisikoregister, 11/11 Fallakten",
+    "16 Datenprüfszenarien, davon 3 fachlich begrenzt",
+    "7/7 Pilot-Mutationstests und 21 Invarianten",
+    "500/500 Risiken, 32/32 historische Cases gemappt",
+    "20/20 identische Pilot-Risiko-Signale in V2",
+    "vier getrennte synthetische Korrekturtests und eine Negativkontrolle",
+    "7 Kern-SQL-Prüfungen und statisches Power-BI-V2-Modell",
+    "PDF Struktur/Inhaltsverzeichnis/Abbildungen"
+  ],
+  "keine_bestaetigung_fuer": [
+    "keinen produktiven ERP- oder WMS-Betrieb",
+    "keine nachgewiesene reale Umsatzwirkung",
+    "keine nativ in Windows getestete Power-BI-V3",
+    "keine V1/V2 Zeitreihenverbesserung",
+    "keine vollautomatische Prüfung aller 26 Geschäftsregeln",
+    "keine GitHub-Veröffentlichung"
+  ]
+}

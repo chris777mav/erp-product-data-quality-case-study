@@ -1,0 +1,17 @@
+{
+  "DQ04": {
+    "rows": 191,
+    "original_control_results_unchanged": true,
+    "unique_asn_line_key": true
+  },
+  "DQ05": {
+    "rows": 191,
+    "original_control_results_unchanged": true,
+    "unique_asn_line_key": true
+  },
+  "ASN_Combined": {
+    "rows": 191,
+    "key": "asn_id + asn_line_id",
+    "reconciliation": "191 unique positions; original DQ04/DQ05 statuses unchanged"
+  }
+}

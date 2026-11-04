@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9b75a9ebc4cf5c828494",
+  "position": {
+    "x": 20,
+    "y": 94,
+    "z": 1000,
+    "height": 112,
+    "width": 230,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DimProduct"
+                    }
+                  },
+                  "Property": "Artikel_V2"
+                }
+              },
+              "queryRef": "V2_DimProduct.Artikel_V2",
+              "nativeQueryRef": "Artikel_V2"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Artikel in V2'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "af8be474becf5221944b",
+  "position": {
+    "x": 260,
+    "y": 90,
+    "z": 1000,
+    "height": 112,
+    "width": 220,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V2_DQ07"
+                    }
+                  },
+                  "Property": "Incidents_Fehlende_Evidenz"
+                }
+              },
+              "queryRef": "V2_DQ07.Incidents_Fehlende_Evidenz",
+              "nativeQueryRef": "Incidents_Fehlende_Evidenz"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mit fehlender Evidenz'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

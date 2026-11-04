@@ -1,0 +1,3366 @@
+[
+  {
+    "incident_id": "INC-001",
+    "betroffene_referenz": "HYG-1004",
+    "sku": "HYG-1004",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "TARGET_RECORD_NOT_VISIBLE",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MIGRATION_TARGET_MISSING",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-001",
+        "case_id": "INC-001",
+        "source_table": "migration_scope",
+        "source_record_reference": "RUN-2026-09/ALT-1004",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Migration required"
+      },
+      {
+        "evidence_id": "EVID-002",
+        "case_id": "INC-001",
+        "source_table": "migration_events",
+        "source_record_reference": "ALT-1004",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "No matching event in supplied log"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1004",
+          "sku": "HYG-1004",
+          "expected_target_record_id": "ERP-9004",
+          "dq01_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1004",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": null,
+          "dq02_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1004",
+          "expected_version": "R1",
+          "applied_rule_version": null,
+          "applied_length_factor": null,
+          "load_status": null,
+          "approval_status": null,
+          "valid_from": null,
+          "valid_to": null,
+          "sent_at": null,
+          "version_check": "NO_EVENT",
+          "approval_check": "NO_EVENT",
+          "validity_check": "NO_EVENT",
+          "factor_check": "NO_EVENT"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1004",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / MDM",
+    "massnahme_vorgeschlagen": "Migrierten Zielartikel und Eventquellen unter alter und neuer Identität prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-002",
+    "betroffene_referenz": "HYG-1006",
+    "sku": "HYG-1006",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "DIMENSION_DISCREPANCY",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "DIMENSION_MISMATCH | MAPPING_NONCOMPLIANT",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-003",
+        "case_id": "INC-002",
+        "source_table": "migration_events",
+        "source_record_reference": "MIG-E-1006",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Migration event can be inspected"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1006",
+          "sku": "HYG-1006",
+          "expected_target_record_id": "ERP-9006",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1006",
+          "source_length": 8.0,
+          "source_uom": "IN",
+          "expected_length_mm": 203.2,
+          "actual_length_mm": 200.0,
+          "dq02_status": "DIMENSION_MISMATCH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1006",
+          "expected_version": "R1",
+          "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+          "applied_length_factor": 25.0,
+          "load_status": "SUCCESS",
+          "approval_status": "NOT_APPROVED",
+          "valid_from": "2026-08-01",
+          "valid_to": "2026-08-31",
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "VERSION_MISMATCH",
+          "approval_check": "UNAPPROVED_RULE",
+          "validity_check": "EXPIRED",
+          "factor_check": "FACTOR_MISMATCH"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1006",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_TEILWEISE_BELEGT",
+    "ursachengrenze": "Nicht genehmigter Faktor 25,0 ist belegt; Auswahlgrund dieser Version offen. Korrektur nur in getrennter Testsandbox geschlossen.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / ERP / WMS",
+    "massnahme_vorgeschlagen": "Quellwert, Umrechnungsregel und S2-Länge mit technischer Laufversion vergleichen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "HISTORISCH_OFFEN; SEPARATE_PILOT_SANDBOX_CLOSED",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-003",
+    "betroffene_referenz": "PO-0007",
+    "sku": "HYG-1007",
+    "link_via": "PO->SKU",
+    "gemeldetes_symptom": "PACKAGING_DIFFERENCE",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "PACKAGING_BLOCK | RECEIPT_HOLD",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-004",
+        "case_id": "INC-003",
+        "source_table": "asns",
+        "source_record_reference": "ASN-0007/10",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Supplier packing declaration available"
+      },
+      {
+        "evidence_id": "EVID-005",
+        "case_id": "INC-003",
+        "source_table": "change_approvals",
+        "source_record_reference": "PO-0007",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "No corresponding approval on file"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1007",
+          "sku": "HYG-1007",
+          "expected_target_record_id": "ERP-9007",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1007",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1007",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-0007",
+          "po_id": "PO-0007",
+          "sku": "HYG-1007",
+          "expected_pack_version_id": "PK-1007-A",
+          "pack_version_id": "UNKNOWN_PACK_VERSION",
+          "dq04_status": "BLOCK"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-0007",
+          "po_id": "PO-0007",
+          "sku": "HYG-1007",
+          "announced_qty": 1000,
+          "received_qty": 1000,
+          "receipt_count": 1,
+          "posted_count": 0,
+          "hold_count": 1,
+          "dq05_status": "RECEIPT_ON_HOLD"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-1007",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-0007",
+        "asn_line_id": "10",
+        "po_id": "PO-0007",
+        "po_line_id": "10",
+        "sku": "HYG-1007",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 4,
+        "each_per_package": 250,
+        "announced_base_qty": 1000,
+        "pack_version_id": "UNKNOWN_PACK_VERSION",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-0007",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0007",
+        "asn_line_id": "10",
+        "po_id": "PO-0007",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1007",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 4,
+        "each_per_package": 250,
+        "received_base_qty": 1000,
+        "processing_status": "HOLD"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Einkauf / Lieferant / WMS",
+    "massnahme_vorgeschlagen": "PO/ASN/Packversion/zeitliche Freigabe abgleichen; HOLD getrennt beurteilen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-004",
+    "betroffene_referenz": "PO-0008",
+    "sku": "HYG-1008",
+    "link_via": "PO->SKU",
+    "gemeldetes_symptom": "PACKAGING_DIFFERENCE",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "PACKAGING_REVIEW",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-006",
+        "case_id": "INC-004",
+        "source_table": "change_approvals",
+        "source_record_reference": "CHG-1008",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Explicit case change approval"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1008",
+          "sku": "HYG-1008",
+          "expected_target_record_id": "ERP-9008",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1008",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1008",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-0008",
+          "po_id": "PO-0008",
+          "sku": "HYG-1008",
+          "expected_pack_version_id": "PK-1008-A",
+          "pack_version_id": "PK-1008-B",
+          "dq04_status": "REVIEW"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-0008",
+          "po_id": "PO-0008",
+          "sku": "HYG-1008",
+          "announced_qty": 1000,
+          "received_qty": 1000,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-1008",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-0008",
+        "asn_line_id": "10",
+        "po_id": "PO-0008",
+        "po_line_id": "10",
+        "sku": "HYG-1008",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 8,
+        "each_per_package": 125,
+        "announced_base_qty": 1000,
+        "pack_version_id": "PK-1008-B",
+        "change_approval_id": "CHG-1008"
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-0008",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0008",
+        "asn_line_id": "10",
+        "po_id": "PO-0008",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1008",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 8,
+        "each_per_package": 125,
+        "received_base_qty": 1000,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Genehmigte Packänderung vor ASN; Bestellzeitpunkt verlangt eine dokumentierte Rückfrage. Kein Fehler als sicher behauptbar.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Einkauf / Lieferant / WMS",
+    "massnahme_vorgeschlagen": "PO/ASN/Packversion/zeitliche Freigabe abgleichen; HOLD getrennt beurteilen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "GENEHMIGTE_AENDERUNG; ADMINISTRATIVER_REVIEW",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-005",
+    "betroffene_referenz": "PO-0011",
+    "sku": "HYG-1011",
+    "link_via": "PO->SKU",
+    "gemeldetes_symptom": "ORDER_PARTIALLY_DELIVERED",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "RECEIPT_MISSING",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-007",
+        "case_id": "INC-005",
+        "source_table": "receipts",
+        "source_record_reference": "REC-0011-A/10",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "One partial receipt recorded"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1011",
+          "sku": "HYG-1011",
+          "expected_target_record_id": "ERP-9011",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1011",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1011",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-0011-A",
+          "po_id": "PO-0011",
+          "sku": "HYG-1011",
+          "expected_pack_version_id": "PK-1011-A",
+          "pack_version_id": "PK-1011-A",
+          "dq04_status": "PASS"
+        },
+        {
+          "asn_id": "ASN-0011-B",
+          "po_id": "PO-0011",
+          "sku": "HYG-1011",
+          "expected_pack_version_id": "PK-1011-A",
+          "pack_version_id": "PK-1011-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-0011-A",
+          "po_id": "PO-0011",
+          "sku": "HYG-1011",
+          "announced_qty": 96,
+          "received_qty": 96,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        },
+        {
+          "asn_id": "ASN-0011-B",
+          "po_id": "PO-0011",
+          "sku": "HYG-1011",
+          "announced_qty": 144,
+          "received_qty": null,
+          "receipt_count": null,
+          "posted_count": null,
+          "hold_count": null,
+          "dq05_status": "MISSING_RECEIPT"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-1011",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-0011-A",
+        "asn_line_id": "10",
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "sku": "HYG-1011",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 4,
+        "each_per_package": 24,
+        "announced_base_qty": 96,
+        "pack_version_id": "PK-1011-A",
+        "change_approval_id": null
+      },
+      {
+        "asn_id": "ASN-0011-B",
+        "asn_line_id": "10",
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "sku": "HYG-1011",
+        "sent_at": "2026-09-17T08:00:00",
+        "package_count": 6,
+        "each_per_package": 24,
+        "announced_base_qty": 144,
+        "pack_version_id": "PK-1011-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-0011-A",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0011-A",
+        "asn_line_id": "10",
+        "po_id": "PO-0011",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1011",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 4,
+        "each_per_package": 24,
+        "received_base_qty": 96,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Einkauf",
+    "massnahme_vorgeschlagen": "ASN-Zeilen und Receipts getrennt abstimmen; fehlender Beleg keine Nichtlieferung.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-006",
+    "betroffene_referenz": "REC-0012",
+    "sku": "HYG-1012",
+    "link_via": "Receipt->ASN/PO->SKU",
+    "gemeldetes_symptom": "RECEIPT_QUARANTINED",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "RECEIPT_HOLD",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-008",
+        "case_id": "INC-006",
+        "source_table": "stock_snapshots",
+        "source_record_reference": "HYG-1012/DC-HH-01",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Blocked balance in dated snapshot"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1012",
+          "sku": "HYG-1012",
+          "expected_target_record_id": "ERP-9012",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1012",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1012",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-0012",
+          "po_id": "PO-0012",
+          "sku": "HYG-1012",
+          "expected_pack_version_id": "PK-1012-A",
+          "pack_version_id": "PK-1012-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-0012",
+          "po_id": "PO-0012",
+          "sku": "HYG-1012",
+          "announced_qty": 60,
+          "received_qty": 60,
+          "receipt_count": 1,
+          "posted_count": 0,
+          "hold_count": 1,
+          "dq05_status": "RECEIPT_ON_HOLD"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-1012",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-0012",
+        "asn_line_id": "10",
+        "po_id": "PO-0012",
+        "po_line_id": "10",
+        "sku": "HYG-1012",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 5,
+        "each_per_package": 12,
+        "announced_base_qty": 60,
+        "pack_version_id": "PK-1012-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-0012",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-0012",
+        "asn_line_id": "10",
+        "po_id": "PO-0012",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-1012",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 5,
+        "each_per_package": 12,
+        "received_base_qty": 60,
+        "processing_status": "HOLD"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Logistik",
+    "massnahme_vorgeschlagen": "HOLD-Grund, gesperrten Bestand, Freigabegate und mögliche Prozessfolgen prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-007",
+    "betroffene_referenz": "HYG-1009",
+    "sku": "HYG-1009",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "WMS_RECORD_MISSING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "WMS_REFERENCE_MISSING",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-009",
+        "case_id": "INC-007",
+        "source_table": "interface_events",
+        "source_record_reference": "HYG-1009",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "No submitted event in extract"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1009",
+          "sku": "HYG-1009",
+          "expected_target_record_id": "ERP-9009",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1009",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1009",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1009",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Schnittstellenbetreuung",
+    "massnahme_vorgeschlagen": "Schnittstellen- und WMS-Protokolle getrennt prüfen, kein bestimmter Root Cause ableitbar.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-008",
+    "betroffene_referenz": "HYG-1010",
+    "sku": "HYG-1010",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "WMS_RECORD_MISSING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "WMS_REFERENCE_MISSING",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-010",
+        "case_id": "INC-008",
+        "source_table": "interface_events",
+        "source_record_reference": "INT-1010",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Processing log exists"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1010",
+          "sku": "HYG-1010",
+          "expected_target_record_id": "ERP-9010",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1010",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1010",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1010",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Schnittstellenbetreuung",
+    "massnahme_vorgeschlagen": "Schnittstellen- und WMS-Protokolle getrennt prüfen, kein bestimmter Root Cause ableitbar.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-009",
+    "betroffene_referenz": "HYG-1013",
+    "sku": "HYG-1013",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "PRODUCT_MEASURE_NOT_VERIFIED",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "SUPPLIER_EVIDENCE_UNCONFIRMED",
+    "dokumentierte_evidenzlage": "NACHWEIS_UNBESTAETIGT",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-011",
+        "case_id": "INC-009",
+        "source_table": "supplier_references",
+        "source_record_reference": "REF-1013-A",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Supplier reference lacks confirmation"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-1013",
+          "sku": "HYG-1013",
+          "expected_target_record_id": "ERP-9013",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-1013",
+          "source_length": 160.0,
+          "source_uom": "MM",
+          "expected_length_mm": 160.0,
+          "actual_length_mm": 160.0,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-1013",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1013",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / Lieferant",
+    "massnahme_vorgeschlagen": "Lieferantenmaßreferenz und Genehmigung nachfordern, nicht blind als Fehlmaß klassifizieren.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-010",
+    "betroffene_referenz": "HYG-1016",
+    "sku": "HYG-1016",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "ARTICLE_NOT_ORDERABLE",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P3",
+    "risikosignale": "DOCUMENTED_LAUNCH_HOLD",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-012",
+        "case_id": "INC-010",
+        "source_table": "releases",
+        "source_record_reference": "REL-1016-PROCUREMENT",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Process approval/hold recorded"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [],
+      "DQ-02": [],
+      "DQ-03": [],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1016",
+          "procurement": "BLOCK",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "DOCUMENTED_LAUNCH_HOLD"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Geplanter Launch-HOLD statt belegtem DQ-Fehler; keine ungeprüfte Freigabe.",
+    "kontrollentscheidung_vorgeschlagen": "DOKUMENTIERTE_NACHVERFOLGUNG",
+    "prozess_eigner_vorgeschlagen": "Produktmanagement / Einkauf",
+    "massnahme_vorgeschlagen": "Launch-Termin und dokumentierte Plan-Sperre gegen echte Blockade prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "PLANMAESSIGER_HOLD; FACHLICH_GUELTIGE_AUSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-011",
+    "betroffene_referenz": "HYG-1017",
+    "sku": "HYG-1017",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "LAUNCH_NOT_RELEASED",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "PACKAGING_RELEASE_REVIEW | SUPPLIER_EVIDENCE_UNCONFIRMED",
+    "dokumentierte_evidenzlage": "NACHWEIS_UNBESTAETIGT",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-013",
+        "case_id": "INC-011",
+        "source_table": "supplier_references",
+        "source_record_reference": "REF-1017-A",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "Supplier reference lacks confirmation"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [],
+      "DQ-02": [],
+      "DQ-03": [],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-1017",
+          "procurement": "REVIEW",
+          "wms_receipt": "REVIEW",
+          "branch_supply": "REVIEW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "PACKAGING_REVIEW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Produktmanagement / Einkauf",
+    "massnahme_vorgeschlagen": "Lieferanten-/Packnachweis nachfordern, REVIEW nicht als FAIL deklarieren.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2058",
+    "betroffene_referenz": "HYG-2058",
+    "sku": "HYG-2058",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "DIMENSION_MISMATCH",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "DIMENSION_MISMATCH",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2058",
+        "case_id": "INC-V2-2058",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2058",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_DIMENSION_MISMATCH_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2058",
+          "sku": "HYG-2058",
+          "expected_target_record_id": "ERP-12058",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2058",
+          "source_length": 154.96,
+          "source_uom": "MM",
+          "expected_length_mm": 154.96,
+          "actual_length_mm": 151.76,
+          "dq02_status": "DIMENSION_MISMATCH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2058",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2058",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / ERP / WMS",
+    "massnahme_vorgeschlagen": "Quellwert und Zielwert belegen; Mappingevent prüfen; Retest einschließlich Folgesystem vorsehen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2062",
+    "betroffene_referenz": "HYG-2062",
+    "sku": "HYG-2062",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "UNAPPROVED_MAPPING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MAPPING_NONCOMPLIANT",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2062",
+        "case_id": "INC-V2-2062",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2062",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_UNAPPROVED_MAPPING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2062",
+          "sku": "HYG-2062",
+          "expected_target_record_id": "ERP-12062",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2062",
+          "source_length": 205.02,
+          "source_uom": "MM",
+          "expected_length_mm": 205.02,
+          "actual_length_mm": 205.02,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2062",
+          "expected_version": "R1",
+          "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "NOT_APPROVED",
+          "valid_from": "2026-08-01",
+          "valid_to": "2026-08-31",
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "VERSION_MISMATCH",
+          "approval_check": "UNAPPROVED_RULE",
+          "validity_check": "EXPIRED",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2062",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / Data Engineering",
+    "massnahme_vorgeschlagen": "Version und Genehmigung zum Versandzeitpunkt kontrollieren; Laufkonfiguration/Selektion getrennt prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2086",
+    "betroffene_referenz": "HYG-2086",
+    "sku": "HYG-2086",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "MISSING_TARGET",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MIGRATION_TARGET_MISSING",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2086",
+        "case_id": "INC-V2-2086",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2086",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_MISSING_TARGET_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2086",
+          "sku": "HYG-2086",
+          "expected_target_record_id": "ERP-12086",
+          "dq01_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2086",
+          "source_length": 168.93,
+          "source_uom": "MM",
+          "expected_length_mm": 168.93,
+          "actual_length_mm": null,
+          "dq02_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2086",
+          "expected_version": "R1",
+          "applied_rule_version": null,
+          "applied_length_factor": null,
+          "load_status": null,
+          "approval_status": null,
+          "valid_from": null,
+          "valid_to": null,
+          "sent_at": null,
+          "version_check": "NO_EVENT",
+          "approval_check": "NO_EVENT",
+          "validity_check": "NO_EVENT",
+          "factor_check": "NO_EVENT"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2086",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / MDM",
+    "massnahme_vorgeschlagen": "Migration-Scope, Laufprotokoll und erlaubte Nachladung klären.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2114",
+    "betroffene_referenz": "HYG-2114",
+    "sku": "HYG-2114",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "RECEIPT_GAP",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "RECEIPT_MISSING",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2114",
+        "case_id": "INC-V2-2114",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2114",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_RECEIPT_GAP_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2114",
+          "sku": "HYG-2114",
+          "expected_target_record_id": "ERP-12114",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2114",
+          "source_length": 181.27,
+          "source_uom": "MM",
+          "expected_length_mm": 181.27,
+          "actual_length_mm": 181.27,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2114",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2114",
+          "po_id": "PO-2114",
+          "sku": "HYG-2114",
+          "expected_pack_version_id": "PK-2114-A",
+          "pack_version_id": "PK-2114-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2114",
+          "po_id": "PO-2114",
+          "sku": "HYG-2114",
+          "announced_qty": 576,
+          "received_qty": null,
+          "receipt_count": null,
+          "posted_count": null,
+          "hold_count": null,
+          "dq05_status": "MISSING_RECEIPT"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2114",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2114",
+        "asn_line_id": "10",
+        "po_id": "PO-2114",
+        "po_line_id": "10",
+        "sku": "HYG-2114",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 6,
+        "each_per_package": 96,
+        "announced_base_qty": 576,
+        "pack_version_id": "PK-2114-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Einkauf",
+    "massnahme_vorgeschlagen": "Receipt-/WMS-Journal beschaffen, vor hypothetischer Nachbuchung Transportnachweis prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2116",
+    "betroffene_referenz": "HYG-2116",
+    "sku": "HYG-2116",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "DIMENSION_MISMATCH",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "DIMENSION_MISMATCH",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2116",
+        "case_id": "INC-V2-2116",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2116",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_DIMENSION_MISMATCH_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2116",
+          "sku": "HYG-2116",
+          "expected_target_record_id": "ERP-12116",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2116",
+          "source_length": 206.67,
+          "source_uom": "MM",
+          "expected_length_mm": 206.67,
+          "actual_length_mm": 203.47,
+          "dq02_status": "DIMENSION_MISMATCH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2116",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2116",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / ERP / WMS",
+    "massnahme_vorgeschlagen": "Quellwert und Zielwert belegen; Mappingevent prüfen; Retest einschließlich Folgesystem vorsehen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2124",
+    "betroffene_referenz": "HYG-2124",
+    "sku": "HYG-2124",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "UNAPPROVED_MAPPING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MAPPING_NONCOMPLIANT",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2124",
+        "case_id": "INC-V2-2124",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2124",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_UNAPPROVED_MAPPING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2124",
+          "sku": "HYG-2124",
+          "expected_target_record_id": "ERP-12124",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2124",
+          "source_length": 139.19,
+          "source_uom": "MM",
+          "expected_length_mm": 139.19,
+          "actual_length_mm": 139.19,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2124",
+          "expected_version": "R1",
+          "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "NOT_APPROVED",
+          "valid_from": "2026-08-01",
+          "valid_to": "2026-08-31",
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "VERSION_MISMATCH",
+          "approval_check": "UNAPPROVED_RULE",
+          "validity_check": "EXPIRED",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2124",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / Data Engineering",
+    "massnahme_vorgeschlagen": "Version und Genehmigung zum Versandzeitpunkt kontrollieren; Laufkonfiguration/Selektion getrennt prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2172",
+    "betroffene_referenz": "HYG-2172",
+    "sku": "HYG-2172",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "MISSING_TARGET",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MIGRATION_TARGET_MISSING",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2172",
+        "case_id": "INC-V2-2172",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2172",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_MISSING_TARGET_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2172",
+          "sku": "HYG-2172",
+          "expected_target_record_id": "ERP-12172",
+          "dq01_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2172",
+          "source_length": 237.79,
+          "source_uom": "MM",
+          "expected_length_mm": 237.79,
+          "actual_length_mm": null,
+          "dq02_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2172",
+          "expected_version": "R1",
+          "applied_rule_version": null,
+          "applied_length_factor": null,
+          "load_status": null,
+          "approval_status": null,
+          "valid_from": null,
+          "valid_to": null,
+          "sent_at": null,
+          "version_check": "NO_EVENT",
+          "approval_check": "NO_EVENT",
+          "validity_check": "NO_EVENT",
+          "factor_check": "NO_EVENT"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2172",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / MDM",
+    "massnahme_vorgeschlagen": "Migration-Scope, Laufprotokoll und erlaubte Nachladung klären.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2174",
+    "betroffene_referenz": "HYG-2174",
+    "sku": "HYG-2174",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "DIMENSION_MISMATCH",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "DIMENSION_MISMATCH",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2174",
+        "case_id": "INC-V2-2174",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2174",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_DIMENSION_MISMATCH_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2174",
+          "sku": "HYG-2174",
+          "expected_target_record_id": "ERP-12174",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2174",
+          "source_length": 259.3,
+          "source_uom": "MM",
+          "expected_length_mm": 259.3,
+          "actual_length_mm": 256.1,
+          "dq02_status": "DIMENSION_MISMATCH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2174",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2174",
+          "po_id": "PO-2174",
+          "sku": "HYG-2174",
+          "expected_pack_version_id": "PK-2174-A",
+          "pack_version_id": "PK-2174-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2174",
+          "po_id": "PO-2174",
+          "sku": "HYG-2174",
+          "announced_qty": 480,
+          "received_qty": 480,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2174",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2174",
+        "asn_line_id": "10",
+        "po_id": "PO-2174",
+        "po_line_id": "10",
+        "sku": "HYG-2174",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 10,
+        "each_per_package": 48,
+        "announced_base_qty": 480,
+        "pack_version_id": "PK-2174-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2174",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2174",
+        "asn_line_id": "10",
+        "po_id": "PO-2174",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2174",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 10,
+        "each_per_package": 48,
+        "received_base_qty": 480,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / ERP / WMS",
+    "massnahme_vorgeschlagen": "Quellwert und Zielwert belegen; Mappingevent prüfen; Retest einschließlich Folgesystem vorsehen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2186",
+    "betroffene_referenz": "HYG-2186",
+    "sku": "HYG-2186",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "UNAPPROVED_MAPPING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MAPPING_NONCOMPLIANT | PACKAGING_BLOCK",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2186",
+        "case_id": "INC-V2-2186",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2186",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_UNAPPROVED_MAPPING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2186",
+          "sku": "HYG-2186",
+          "expected_target_record_id": "ERP-12186",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2186",
+          "source_length": 241.61,
+          "source_uom": "MM",
+          "expected_length_mm": 241.61,
+          "actual_length_mm": 241.61,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2186",
+          "expected_version": "R1",
+          "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "NOT_APPROVED",
+          "valid_from": "2026-08-01",
+          "valid_to": "2026-08-31",
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "VERSION_MISMATCH",
+          "approval_check": "UNAPPROVED_RULE",
+          "validity_check": "EXPIRED",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2186",
+          "po_id": "PO-2186",
+          "sku": "HYG-2186",
+          "expected_pack_version_id": "PK-2186-A",
+          "pack_version_id": "PK-2186-A",
+          "dq04_status": "BLOCK"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2186",
+          "po_id": "PO-2186",
+          "sku": "HYG-2186",
+          "announced_qty": 769,
+          "received_qty": 769,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2186",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2186",
+        "asn_line_id": "10",
+        "po_id": "PO-2186",
+        "po_line_id": "10",
+        "sku": "HYG-2186",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 8,
+        "each_per_package": 96,
+        "announced_base_qty": 769,
+        "pack_version_id": "PK-2186-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2186",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2186",
+        "asn_line_id": "10",
+        "po_id": "PO-2186",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2186",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 8,
+        "each_per_package": 96,
+        "received_base_qty": 769,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / Data Engineering",
+    "massnahme_vorgeschlagen": "Version und Genehmigung zum Versandzeitpunkt kontrollieren; Laufkonfiguration/Selektion getrennt prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2222",
+    "betroffene_referenz": "HYG-2222",
+    "sku": "HYG-2222",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "PACKAGING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "PACKAGING_BLOCK",
+    "dokumentierte_evidenzlage": "NACHWEIS_UNBESTAETIGT",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2222",
+        "case_id": "INC-V2-2222",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2222",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_PACKAGING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2222",
+          "sku": "HYG-2222",
+          "expected_target_record_id": "ERP-12222",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2222",
+          "source_length": 184.8,
+          "source_uom": "MM",
+          "expected_length_mm": 184.8,
+          "actual_length_mm": 184.8,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2222",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2222",
+          "po_id": "PO-2222",
+          "sku": "HYG-2222",
+          "expected_pack_version_id": "PK-2222-A",
+          "pack_version_id": "PK-2222-UNKNOWN",
+          "dq04_status": "BLOCK"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2222",
+          "po_id": "PO-2222",
+          "sku": "HYG-2222",
+          "announced_qty": 864,
+          "received_qty": 864,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2222",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2222",
+        "asn_line_id": "10",
+        "po_id": "PO-2222",
+        "po_line_id": "10",
+        "sku": "HYG-2222",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 9,
+        "each_per_package": 96,
+        "announced_base_qty": 864,
+        "pack_version_id": "PK-2222-UNKNOWN",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2222",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2222",
+        "asn_line_id": "10",
+        "po_id": "PO-2222",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2222",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 9,
+        "each_per_package": 96,
+        "received_base_qty": 864,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Einkauf / Lieferant / WMS",
+    "massnahme_vorgeschlagen": "PO/ASN/Packversion gegen Lieferantenbestätigung abgleichen, WMS-Freigabe nicht fingieren.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2228",
+    "betroffene_referenz": "HYG-2228",
+    "sku": "HYG-2228",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "RECEIPT_GAP",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "RECEIPT_MISSING",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2228",
+        "case_id": "INC-V2-2228",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2228",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_RECEIPT_GAP_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2228",
+          "sku": "HYG-2228",
+          "expected_target_record_id": "ERP-12228",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2228",
+          "source_length": 261.47,
+          "source_uom": "MM",
+          "expected_length_mm": 261.47,
+          "actual_length_mm": 261.47,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2228",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2228",
+          "po_id": "PO-2228",
+          "sku": "HYG-2228",
+          "expected_pack_version_id": "PK-2228-A",
+          "pack_version_id": "PK-2228-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2228",
+          "po_id": "PO-2228",
+          "sku": "HYG-2228",
+          "announced_qty": 384,
+          "received_qty": null,
+          "receipt_count": null,
+          "posted_count": null,
+          "hold_count": null,
+          "dq05_status": "MISSING_RECEIPT"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2228",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2228",
+        "asn_line_id": "10",
+        "po_id": "PO-2228",
+        "po_line_id": "10",
+        "sku": "HYG-2228",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 8,
+        "each_per_package": 48,
+        "announced_base_qty": 384,
+        "pack_version_id": "PK-2228-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Einkauf",
+    "massnahme_vorgeschlagen": "Receipt-/WMS-Journal beschaffen, vor hypothetischer Nachbuchung Transportnachweis prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2232",
+    "betroffene_referenz": "HYG-2232",
+    "sku": "HYG-2232",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "DIMENSION_MISMATCH",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "DIMENSION_MISMATCH",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2232",
+        "case_id": "INC-V2-2232",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2232",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_DIMENSION_MISMATCH_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2232",
+          "sku": "HYG-2232",
+          "expected_target_record_id": "ERP-12232",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2232",
+          "source_length": 138.27,
+          "source_uom": "MM",
+          "expected_length_mm": 138.27,
+          "actual_length_mm": 135.07,
+          "dq02_status": "DIMENSION_MISMATCH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2232",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2232",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / ERP / WMS",
+    "massnahme_vorgeschlagen": "Quellwert und Zielwert belegen; Mappingevent prüfen; Retest einschließlich Folgesystem vorsehen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2246",
+    "betroffene_referenz": "HYG-2246",
+    "sku": "HYG-2246",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "PACKAGING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "PACKAGING_BLOCK",
+    "dokumentierte_evidenzlage": "NACHWEIS_UNBESTAETIGT",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2246",
+        "case_id": "INC-V2-2246",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2246",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_PACKAGING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2246",
+          "sku": "HYG-2246",
+          "expected_target_record_id": "ERP-12246",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2246",
+          "source_length": 147.89,
+          "source_uom": "MM",
+          "expected_length_mm": 147.89,
+          "actual_length_mm": null,
+          "dq02_status": "MISSING_TARGET_LENGTH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2246",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2246",
+          "po_id": "PO-2246",
+          "sku": "HYG-2246",
+          "expected_pack_version_id": "PK-2246-A",
+          "pack_version_id": "PK-2246-DRAFT",
+          "dq04_status": "BLOCK"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2246",
+          "po_id": "PO-2246",
+          "sku": "HYG-2246",
+          "announced_qty": 240,
+          "received_qty": 240,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2246",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2246",
+        "asn_line_id": "10",
+        "po_id": "PO-2246",
+        "po_line_id": "10",
+        "sku": "HYG-2246",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 5,
+        "each_per_package": 48,
+        "announced_base_qty": 240,
+        "pack_version_id": "PK-2246-DRAFT",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2246",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2246",
+        "asn_line_id": "10",
+        "po_id": "PO-2246",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2246",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 5,
+        "each_per_package": 48,
+        "received_base_qty": 240,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Einkauf / Lieferant / WMS",
+    "massnahme_vorgeschlagen": "PO/ASN/Packversion gegen Lieferantenbestätigung abgleichen, WMS-Freigabe nicht fingieren.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2248",
+    "betroffene_referenz": "HYG-2248",
+    "sku": "HYG-2248",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "UNAPPROVED_MAPPING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MAPPING_NONCOMPLIANT",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2248",
+        "case_id": "INC-V2-2248",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2248",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_UNAPPROVED_MAPPING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2248",
+          "sku": "HYG-2248",
+          "expected_target_record_id": "ERP-12248",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2248",
+          "source_length": 172.25,
+          "source_uom": "MM",
+          "expected_length_mm": 172.25,
+          "actual_length_mm": 172.25,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2248",
+          "expected_version": "R1",
+          "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "NOT_APPROVED",
+          "valid_from": "2026-08-01",
+          "valid_to": "2026-08-31",
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "VERSION_MISMATCH",
+          "approval_check": "UNAPPROVED_RULE",
+          "validity_check": "EXPIRED",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2248",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / Data Engineering",
+    "massnahme_vorgeschlagen": "Version und Genehmigung zum Versandzeitpunkt kontrollieren; Laufkonfiguration/Selektion getrennt prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2258",
+    "betroffene_referenz": "HYG-2258",
+    "sku": "HYG-2258",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "MISSING_TARGET",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MIGRATION_TARGET_MISSING",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2258",
+        "case_id": "INC-V2-2258",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2258",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_MISSING_TARGET_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2258",
+          "sku": "HYG-2258",
+          "expected_target_record_id": "ERP-12258",
+          "dq01_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2258",
+          "source_length": 128.4,
+          "source_uom": "MM",
+          "expected_length_mm": 128.4,
+          "actual_length_mm": null,
+          "dq02_status": "MISSING_TARGET"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2258",
+          "expected_version": "R1",
+          "applied_rule_version": null,
+          "applied_length_factor": null,
+          "load_status": null,
+          "approval_status": null,
+          "valid_from": null,
+          "valid_to": null,
+          "sent_at": null,
+          "version_check": "NO_EVENT",
+          "approval_check": "NO_EVENT",
+          "validity_check": "NO_EVENT",
+          "factor_check": "NO_EVENT"
+        }
+      ],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2258",
+          "po_id": "PO-2258",
+          "sku": "HYG-2258",
+          "expected_pack_version_id": "PK-2258-A",
+          "pack_version_id": "PK-2258-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2258",
+          "po_id": "PO-2258",
+          "sku": "HYG-2258",
+          "announced_qty": 960,
+          "received_qty": 960,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2258",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2258",
+        "asn_line_id": "10",
+        "po_id": "PO-2258",
+        "po_line_id": "10",
+        "sku": "HYG-2258",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 10,
+        "each_per_package": 96,
+        "announced_base_qty": 960,
+        "pack_version_id": "PK-2258-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2258",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2258",
+        "asn_line_id": "10",
+        "po_id": "PO-2258",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2258",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 10,
+        "each_per_package": 96,
+        "received_base_qty": 960,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / MDM",
+    "massnahme_vorgeschlagen": "Migration-Scope, Laufprotokoll und erlaubte Nachladung klären.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2290",
+    "betroffene_referenz": "HYG-2290",
+    "sku": "HYG-2290",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "DIMENSION_MISMATCH",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "DIMENSION_MISMATCH",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2290",
+        "case_id": "INC-V2-2290",
+        "source_table": "target_snapshot",
+        "source_record_reference": "HYG-2290",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_DIMENSION_MISMATCH_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2290",
+          "sku": "HYG-2290",
+          "expected_target_record_id": "ERP-12290",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2290",
+          "source_length": 194.45,
+          "source_uom": "MM",
+          "expected_length_mm": 194.45,
+          "actual_length_mm": 191.25,
+          "dq02_status": "DIMENSION_MISMATCH"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2290",
+          "expected_version": "R1",
+          "applied_rule_version": "R1",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "APPROVED",
+          "valid_from": "2026-08-31",
+          "valid_to": null,
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "PASS",
+          "approval_check": "APPROVED",
+          "validity_check": "EFFECTIVE_AT_SENT_TIME",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2290",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "MDM / ERP / WMS",
+    "massnahme_vorgeschlagen": "Quellwert und Zielwert belegen; Mappingevent prüfen; Retest einschließlich Folgesystem vorsehen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2310",
+    "betroffene_referenz": "HYG-2310",
+    "sku": "HYG-2310",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "UNAPPROVED_MAPPING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "MAPPING_NONCOMPLIANT",
+    "dokumentierte_evidenzlage": "REGISTRIERTE_BELEGE_VERFUEGBAR",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2310",
+        "case_id": "INC-V2-2310",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2310",
+        "evidence_availability": "AVAILABLE",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_UNAPPROVED_MAPPING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [
+        {
+          "legacy_record_id": "ALT-2310",
+          "sku": "HYG-2310",
+          "expected_target_record_id": "ERP-12310",
+          "dq01_status": "PASS"
+        }
+      ],
+      "DQ-02": [
+        {
+          "sku": "HYG-2310",
+          "source_length": 102.81,
+          "source_uom": "MM",
+          "expected_length_mm": 102.81,
+          "actual_length_mm": 102.81,
+          "dq02_status": "PASS"
+        }
+      ],
+      "DQ-03": [
+        {
+          "sku": "HYG-2310",
+          "expected_version": "R1",
+          "applied_rule_version": "UOM_LENGTH_V0_UNAPPROVED",
+          "applied_length_factor": 1.0,
+          "load_status": "SUCCESS",
+          "approval_status": "NOT_APPROVED",
+          "valid_from": "2026-08-01",
+          "valid_to": "2026-08-31",
+          "sent_at": "2026-09-09T10:00:00",
+          "version_check": "VERSION_MISMATCH",
+          "approval_check": "UNAPPROVED_RULE",
+          "validity_check": "EXPIRED",
+          "factor_check": "NOT_APPLICABLE"
+        }
+      ],
+      "DQ-04": [],
+      "DQ-05": [],
+      "DQ-06": [
+        {
+          "sku": "HYG-2310",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "ERP-Migration / Data Engineering",
+    "massnahme_vorgeschlagen": "Version und Genehmigung zum Versandzeitpunkt kontrollieren; Laufkonfiguration/Selektion getrennt prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2342",
+    "betroffene_referenz": "HYG-2342",
+    "sku": "HYG-2342",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "RECEIPT_GAP",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "RECEIPT_MISSING",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2342",
+        "case_id": "INC-V2-2342",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2342",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_RECEIPT_GAP_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [],
+      "DQ-02": [],
+      "DQ-03": [],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2342",
+          "po_id": "PO-2342",
+          "sku": "HYG-2342",
+          "expected_pack_version_id": "PK-2342-A",
+          "pack_version_id": "PK-2342-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2342",
+          "po_id": "PO-2342",
+          "sku": "HYG-2342",
+          "announced_qty": 120,
+          "received_qty": null,
+          "receipt_count": null,
+          "posted_count": null,
+          "hold_count": null,
+          "dq05_status": "MISSING_RECEIPT"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2342",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2342",
+        "asn_line_id": "10",
+        "po_id": "PO-2342",
+        "po_line_id": "10",
+        "sku": "HYG-2342",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 10,
+        "each_per_package": 12,
+        "announced_base_qty": 120,
+        "pack_version_id": "PK-2342-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Einkauf",
+    "massnahme_vorgeschlagen": "Receipt-/WMS-Journal beschaffen, vor hypothetischer Nachbuchung Transportnachweis prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2372",
+    "betroffene_referenz": "HYG-2372",
+    "sku": "HYG-2372",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "PACKAGING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "PACKAGING_BLOCK",
+    "dokumentierte_evidenzlage": "NACHWEIS_UNBESTAETIGT",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2372",
+        "case_id": "INC-V2-2372",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2372",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_PACKAGING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [],
+      "DQ-02": [],
+      "DQ-03": [],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2372",
+          "po_id": "PO-2372",
+          "sku": "HYG-2372",
+          "expected_pack_version_id": "PK-2372-A",
+          "pack_version_id": "PK-2372-A",
+          "dq04_status": "BLOCK"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2372",
+          "po_id": "PO-2372",
+          "sku": "HYG-2372",
+          "announced_qty": 241,
+          "received_qty": 241,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2372",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2372",
+        "asn_line_id": "10",
+        "po_id": "PO-2372",
+        "po_line_id": "10",
+        "sku": "HYG-2372",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 5,
+        "each_per_package": 48,
+        "announced_base_qty": 241,
+        "pack_version_id": "PK-2372-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2372",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2372",
+        "asn_line_id": "10",
+        "po_id": "PO-2372",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2372",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 5,
+        "each_per_package": 48,
+        "received_base_qty": 241,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Einkauf / Lieferant / WMS",
+    "massnahme_vorgeschlagen": "PO/ASN/Packversion gegen Lieferantenbestätigung abgleichen, WMS-Freigabe nicht fingieren.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2444",
+    "betroffene_referenz": "HYG-2444",
+    "sku": "HYG-2444",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "PACKAGING",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P1",
+    "risikosignale": "PACKAGING_BLOCK",
+    "dokumentierte_evidenzlage": "NACHWEIS_UNBESTAETIGT",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2444",
+        "case_id": "INC-V2-2444",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2444",
+        "evidence_availability": "UNCONFIRMED",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_PACKAGING_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [],
+      "DQ-02": [],
+      "DQ-03": [],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2444",
+          "po_id": "PO-2444",
+          "sku": "HYG-2444",
+          "expected_pack_version_id": "PK-2444-A",
+          "pack_version_id": "PK-2444-UNKNOWN",
+          "dq04_status": "BLOCK"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2444",
+          "po_id": "PO-2444",
+          "sku": "HYG-2444",
+          "announced_qty": 336,
+          "received_qty": 336,
+          "receipt_count": 1,
+          "posted_count": 1,
+          "hold_count": 0,
+          "dq05_status": "RECONCILED_POSTED"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2444",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2444",
+        "asn_line_id": "10",
+        "po_id": "PO-2444",
+        "po_line_id": "10",
+        "sku": "HYG-2444",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 7,
+        "each_per_package": 48,
+        "announced_base_qty": 336,
+        "pack_version_id": "PK-2444-UNKNOWN",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [
+      {
+        "receipt_id": "REC-2444",
+        "receipt_line_id": "10",
+        "asn_id": "ASN-2444",
+        "asn_line_id": "10",
+        "po_id": "PO-2444",
+        "po_line_id": "10",
+        "wms_article_id": "WMS-2444",
+        "received_at": "2026-09-17T10:00:00",
+        "package_count": 7,
+        "each_per_package": 48,
+        "received_base_qty": 336,
+        "processing_status": "POSTED"
+      }
+    ],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "Einkauf / Lieferant / WMS",
+    "massnahme_vorgeschlagen": "PO/ASN/Packversion gegen Lieferantenbestätigung abgleichen, WMS-Freigabe nicht fingieren.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  },
+  {
+    "incident_id": "INC-V2-2456",
+    "betroffene_referenz": "HYG-2456",
+    "sku": "HYG-2456",
+    "link_via": "SKU direkt",
+    "gemeldetes_symptom": "RECEIPT_GAP",
+    "historischer_status": "OPEN",
+    "prioritaet_nach_festem_pilotmodell": "P2",
+    "risikosignale": "RECEIPT_MISSING",
+    "dokumentierte_evidenzlage": "NACHWEIS_FEHLT_IM_ABZUG",
+    "evidenz": [
+      {
+        "evidence_id": "EVID-V2-2456",
+        "case_id": "INC-V2-2456",
+        "source_table": "asns",
+        "source_record_reference": "HYG-2456",
+        "evidence_availability": "MISSING",
+        "observed_at": "2026-09-18T15:00:00",
+        "observation": "SYNTHETIC_RECEIPT_GAP_TRIAGE_NOT_ROOT_CAUSE"
+      }
+    ],
+    "dq_pruefresultate": {
+      "DQ-01": [],
+      "DQ-02": [],
+      "DQ-03": [],
+      "DQ-04": [
+        {
+          "asn_id": "ASN-2456",
+          "po_id": "PO-2456",
+          "sku": "HYG-2456",
+          "expected_pack_version_id": "PK-2456-A",
+          "pack_version_id": "PK-2456-A",
+          "dq04_status": "PASS"
+        }
+      ],
+      "DQ-05": [
+        {
+          "asn_id": "ASN-2456",
+          "po_id": "PO-2456",
+          "sku": "HYG-2456",
+          "announced_qty": 480,
+          "received_qty": null,
+          "receipt_count": null,
+          "posted_count": null,
+          "hold_count": null,
+          "dq05_status": "MISSING_RECEIPT"
+        }
+      ],
+      "DQ-06": [
+        {
+          "sku": "HYG-2456",
+          "procurement": "ALLOW",
+          "wms_receipt": "ALLOW",
+          "branch_supply": "ALLOW",
+          "missing_processes": 0,
+          "duplicate_processes": 0,
+          "dq06_status": "ALL_PROCESSES_ALLOW"
+        }
+      ]
+    },
+    "asn_vorgaenge": [
+      {
+        "asn_id": "ASN-2456",
+        "asn_line_id": "10",
+        "po_id": "PO-2456",
+        "po_line_id": "10",
+        "sku": "HYG-2456",
+        "sent_at": "2026-09-16T08:00:00",
+        "package_count": 5,
+        "each_per_package": 96,
+        "announced_base_qty": 480,
+        "pack_version_id": "PK-2456-A",
+        "change_approval_id": null
+      }
+    ],
+    "receipt_belege": [],
+    "ursachenstatus": "URSACHE_OFFEN",
+    "ursachengrenze": "Symptom und verfügbare Daten dokumentiert; genaue technische Ursache durch die vorhandenen Belege nicht abschließend ermittelt.",
+    "kontrollentscheidung_vorgeschlagen": "FACHLICHES_REVIEW",
+    "prozess_eigner_vorgeschlagen": "WMS / Einkauf",
+    "massnahme_vorgeschlagen": "Receipt-/WMS-Journal beschaffen, vor hypothetischer Nachbuchung Transportnachweis prüfen.",
+    "abschlussbedingungen": [
+      "Fachentscheidung inkl. Datum, Verantwortlichem und Event-/Quellnachweisen",
+      "Betroffene SQL-Kontrollen nach Maßnahme wiederholen",
+      "Abhängige ERP-/WMS-/Freigabefolgen dokumentieren",
+      "Administrative Entscheidung erst danach freigeben"
+    ],
+    "aktueller_untersuchungsentscheid": "OFFEN_MIT_NAECHSTER_MASSNAHME",
+    "abschluss_nach_nachgewiesenem_retest": false,
+    "quelle": "V2-Ausgangsstand, keine Mutation der historischen Case-Tabelle"
+  }
+]
